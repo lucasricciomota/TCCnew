@@ -12,7 +12,6 @@
     echo $sintaxesql;
     $resultado = mysqli_query($conexao,$sintaxesql);
     $quantidadedelinhas = mysqli_num_rows($resultado);
-    echo "111";
     if ($quantidadedelinhas == 1){
         echo ("Este Ponto já está cadastrado");
     }
@@ -26,7 +25,7 @@
             if ($resultado == true) {
                 $sql = "SELECT max(idponto) as idponto from ponto;";
                 $resultado = mysqli_query($conexao, $sql);
-                $idponto = "0";
+                $idponto = mysqli_insert_id($conexao);
                 if ($resultado == true) {
                     while ($linha = mysqli_fetch_array($resultado)) {
                         $idponto = $linha["idponto"];
@@ -56,16 +55,10 @@
                     // tenta mover o arquivo para o destino
                     if( @move_uploaded_file( $arquivo_tmp, $destino ))
                     {
-                        $sql = "INSERT into midia (fotos, idponto) VALUES ('$destino', '$idponto');";
+                        $sql = "INSERT into midia (fotos, idponto, principal) VALUES ('$destino', '$idponto', 1);";
                         echo $sql;
                         $resultado = mysqli_query($conexao, $sql);
 
-                        if ($resultado == true) {
-                            header("location:cadastroponto.php");
-                        }
-                        else {
-                            echo "Não foi possível salvar a imagem!";
-                        }
                     }
                     else
                         echo "Erro ao salvar o arquivo. Aparentemente você não tem permissão de escrita.<br />";
@@ -77,19 +70,12 @@
                 echo "Você não enviou nenhum arquivo!";
             }
         }
-
+        
         $fotos = reArrayFiles($_FILES['fotosAdicionais']);
         foreach ($fotos as $foto) {
             if(isset($foto['name']) && $_FILES["foto"]["error"] == 0) {
-                $resultado = mysqli_query($conexao);
-                
-                if ($resultado == true) {
-                    $idponto = "0";
-                    if ($resultado == true) {
-                        while ($linha = mysqli_fetch_array($resultado)) {
-                            $idponto = $linha["idponto"];
-                        }
-                    }
+
+
                     $arquivo_tmp = $foto['tmp_name'];
                     $nome = $foto['name'];
                     
@@ -114,8 +100,7 @@
                         // tenta mover o arquivo para o destino
                         if( @move_uploaded_file( $arquivo_tmp, $destino ))
                         {
-                            $sql = "INSERT into midia (fotos, idponto, principal) VALUES ('$destino', '$idponto', 1);";
-                            echo $sql;
+                            $sql = "INSERT into midia (fotos, idponto, principal) VALUES ('$destino', '$idponto', 0);";
                             $resultado = mysqli_query($conexao, $sql);
 
                             if ($resultado == true) {
@@ -136,7 +121,7 @@
                 }
             }
         }
-    }
+    
 ?>
 
 
