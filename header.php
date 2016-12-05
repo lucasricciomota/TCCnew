@@ -37,9 +37,6 @@
                                 </ul>
                             </li>
                             <li>
-                                <a href="/TCCnew/Restaurantes/restaurantes.php">Restaurantes</a>
-                            </li>
-                            <li>
                                 <a href="/TCCnew/historia/historia.php">História</a>
                             </li>
                             <li class="dropdown">

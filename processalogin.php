@@ -1,5 +1,4 @@
 <?php
-    echo "chegouuuu";
     require_once("conexao.php");
     if (isset($_POST["email"])) {
         $email = $_POST["email"];
@@ -13,7 +12,13 @@
                     $_SESSION["idusuario"] = $linha["idusuario"];
                     $_SESSION["nomeusuario"] = $linha["nome"];
                     $_SESSION ["idtipousuario"] = $linha["idtipoUsuario"];
-                    header('location:index.php');
+                    $bloqueado = $linha["bloqueado"];
+                    if ($bloqueado == "S") {
+                        echo "Usuário Bloqueado!";
+                    }
+                    else {
+                        header('location:index.php');
+                    }
                 }
             }
             else {

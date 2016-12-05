@@ -65,7 +65,54 @@
     </head>
     <body>
         <?php require_once("../header.php");?>
+        <script type="text/javascript">            
+            function mudar(id_el, url_img){
+                $(id_el).attr('src', url_img);
+            }
+            function mostrarModal(){
+
+            }
+        </script>
         <div class="container-fluid">
+        <div id='tallModal' class='modal modal-wide fade'>
+          <div class='modal-dialog'>
+            <div class='modal-content'>
+              <div class='modal-header'>
+                <button type='button' class='close' data-dismiss='modal' aria-hidden='true'>&times;</button></br>
+              </div>
+              <div class='modal-body'>
+                <div class='rowmuseus'>
+                    <script>
+                    </script>
+                   
+                    <div class='col-md-6 jumbotron'>Imagem e Galeria
+                        <div class='main-image'>
+                            <img src='$fotos' alt='Placeholder' class='custom' id='imgPrincipal$contadorimg'>
+                        </div>
+                        <ul class='thumbnails'>
+                        </ul>
+
+                    </div>
+                    <div class='col-md-6 jumbotron'>
+                        <div class='row''>
+                            <div class='col-md-12'>
+                                $nome
+                            </div>
+                        </div>
+                        <div class='row'>
+                            <div class='col-md-12'>Avaliação</div>
+                        </div>
+                        <div class='row'>
+                            <div class='col-md-12'>Informações</div>
+                        </div>
+                    </div> 
+                       
+                </div>
+              </div>
+            </div><!-- /.modal-content -->
+          </div><!-- /.modal-dialog -->
+        </div><!-- /.modal -->
+    </div>
                     <div class="row">
                         <div class="col-lg-12 text-center">
                             <h2>Museus</h2>
@@ -74,14 +121,16 @@
                     </div>
         <?php
             require_once("../conexao.php");
-            $sql = "select p.idponto, p.nome, min(m.fotos) as fotos
+            $sql = "select p.idponto, p.nome, m.fotos as fotos
                     from ponto p left join midia m on p.idponto = m.idponto
                     where idTipoPonto = 3
+                    and m.principal
                     group by p.idponto, p.nome;";
             $resultado = mysqli_query($conexao, $sql);
             $contador = 0;
             $contadorimg = 0;
-            while ($linha = mysqli_fetch_array($resultado)) {
+            $linhas = mysqli_fetch_all($resultado, MYSQL_ASSOC);
+            foreach ($linhas as $linha) {
                 $contador = $contador + 1;
                 $contadorimg = $contadorimg + 1;
                 $id = $linha["idponto"];
@@ -97,54 +146,8 @@
                             <div class='col-md-1'>
                             </div>
                             <div class='col-md-10'>
-                                <div class='row'><a data-toggle='modal' href='#tallModal'><img src='$fotos' class='img-responsive'></a>
-                                    <div id='tallModal' class='modal modal-wide fade'>
-                                      <div class='modal-dialog'>
-                                        <div class='modal-content'>
-                                          <div class='modal-header'>
-                                            <button type='button' class='close' data-dismiss='modal' aria-hidden='true'>&times;</button></br>
-                                          </div>
-                                          <div class='modal-body'>
-                                            <div class='rowmuseus'>
-                                                <script>
-                                                    function mudar(id_el, url_img){
-                                                        $(id_el).attr('src', url_img);
-                                                    }
-                                                </script>
-                                               
-                                                <div class='col-md-6 jumbotron'>Imagem e Galeria
-                                                    <div class='main-image'>
-                                                        <img src='$fotos' alt='Placeholder' class='custom' id='imgPrincipal$contador'>
-                                                    </div>
-                                                    <ul class='thumbnails'>
-                                                        <li><img src='$fotos' alt='Thumbnails' width='598px' onclick='mudar(\"#imgPrincipal$contadorimg\", this.src)'></li>
-                                                        <li><img src='../img/img-02-tn.jpg' alt='Thumbnails onclick='mudar(\"#imgPrincipal$contadorimg\", this.src)'></li>
-                                                        <li><img src='../img/img-03-tn.jpg' alt='Thumbnails' onclick='mudar(\"#imgPrincipal$contadorimg\", this.src)'></li>
-                                                    </ul>
-
-                                                      <script src='https://ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js'></script>
-
-                                                </div>
-                                                <div class='col-md-6 jumbotron'>
-                                                    <div class='row''>
-                                                        <div class='col-md-12'>
-                                                            $nome
-                                                        </div>
-                                                    </div>
-                                                    <div class='row'>
-                                                        <div class='col-md-12'>Avaliação</div>
-                                                    </div>
-                                                    <div class='row'>
-                                                        <div class='col-md-12'>Informações</div>
-                                                    </div>
-                                                </div> 
-                                                   
-                                            </div>
-                                          </div>
-                                        </div><!-- /.modal-content -->
-                                      </div><!-- /.modal-dialog -->
-                                    </div><!-- /.modal -->
-                                </div>
+                                <div class='row'><a onclick='mostrarModal('$id')'><img src='$fotos' class='img-responsive'></a>
+                                    
                                 <div class='row'>$nome</div>
                             </div>
                             <div class='col-md-1'>

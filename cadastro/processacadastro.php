@@ -6,6 +6,7 @@ $telefone = $_POST ['telefone'];
 $email = $_POST ['email'];
 $senha = $_POST ['senha']; 
 $senha2 = $_POST ['senha2'];
+$cidade = $_POST ['cod_cidades'];
 if ($senha == $senha2) {
     $sintaxesql = "SELECT * FROM usuario WHERE nome = '$nome'";
     $resultado = mysqli_query($conexao,$sintaxesql);
@@ -15,7 +16,8 @@ if ($senha == $senha2) {
     }
     else{ 
         $senha = md5($senha);
-        $sintaxesql = "INSERT INTO usuario (nome,telefone,email,senha,IdtipoUsuario) VALUES ('$nome','$telefone','$email','$senha','2','1')";
+        $sintaxesql = "INSERT INTO usuario (nome,telefone,email,senha,IdtipoUsuario,bloqueado,idcidade)
+                        VALUES ('$nome','$telefone','$email','$senha','2','N',$cidade)";
         echo $sintaxesql;
         $cadastrar = mysqli_query($conexao, $sintaxesql);
         session_start();
