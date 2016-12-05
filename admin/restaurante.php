@@ -15,14 +15,14 @@
       if (isset($_SESSION["idtipousuario"])) {
         $idtipousuario = $_SESSION["idtipousuario"];
         if ($idtipousuario == "1") {
-          require_once("headeradmin.php");
+          include("headeradmin.php");
         }
         if ($idtipousuario == "2") {
-          require_once("header.php");
+          include("../header.php");
         }
       }
       else {
-        require_once("header.php");
+        include("../header.php");
       }
     ?>
 	<?php

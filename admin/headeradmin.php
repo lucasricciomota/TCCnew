@@ -24,18 +24,6 @@
                         </li>
                         <li class="dropdown">
                             <a href="" type="button" class="dropdown-toggle" data-toggle="dropdown" role="onmouseover" aria-haspopup="true" aria-expanded="false">
-                                    Restaurantes
-                                <span class="caret"></span>
-                            </a>
-                            <ul class="dropdown-menu">
-                                <li><a href="/TCCnew/Admin/restaurante.php">Gerenciar Restaurantes</a></li>
-                                    <li role="separator" class="divider"></li>
-                                <li><a href="/TCCnew/Admin/cadastrorest.php">Cadastrar Restaurantes</a></li>
-                                    <li role="separator" class="divider"></li>    
-                            </ul>
-                        </li>
-                       <li class="dropdown">
-                            <a href="" type="button" class="dropdown-toggle" data-toggle="dropdown" role="onmouseover" aria-haspopup="true" aria-expanded="false">
                                     Hospedagens
                                 <span class="caret"></span>
                             </a>

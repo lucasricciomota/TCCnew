@@ -25,16 +25,21 @@
         require_once("header.php");
       }
     ?>
+
 	<?php
 		require_once("../conexao.php");
 		$sql = "select * from usuario order by nome;";
 		$resultado = mysqli_query($conexao, $sql);
-		echo "<table>
-				<tr>
-					<td>Nome</td>
-					<td>E-mail</td>
-					<td></td>
-				</tr>";
+		echo "
+			<div class='row'>
+			 	<div class='col-md-12'></div>
+			</div></br>
+			<div class='row'>
+			 	<div class='col-md-1'></div>
+			 	<div class='col-md-2'>Nome</div>
+			 	<div class='col-md-3'>E-mail</div>
+			 	<div class='col-md-6'></div>
+			 </div></br>";
 		while ($linha = mysqli_fetch_array($resultado)) {
 			$nome = $linha["nome"];
 			$email = $linha["email"];
@@ -47,16 +52,23 @@
 			else { $textobloqueio = "Bloquear"; }
 			if ($idtipousuario == "1") { $tipousuario = "Tornar Usuário"; }
 			else { $tipousuario = "Tornar Administrador"; }
-			echo "<tr>
-					<td>".$nome."</td>
-					<td>".$email."</td>
-					<td>
-						<a href='processabloqueio.php?idusuario=".$idusuario."&bloqueado=".$bloqueado."'>".$textobloqueio."</a>
-						<a href='processaadmin.php?idusuario=".$idusuario."&tipousuario=".$idtipousuario."'>".$tipousuario."</a>
-					</td>
-				</tr>";
+			echo "<div class='row'>
+					<div class='col-md-1'></div>
+				 	<div class='col-md-2'>".$nome."</div>
+				 	<div class='col-md-3'>".$email."</div>
+				 	<div class='col-md-2'>
+				 		<a href='processabloqueio.php?idusuario=".$idusuario."&bloqueado=".$bloqueado."'>".$textobloqueio."</a>
+				 	</div>
+				 	<div class='col-md-3'>
+				 		<a href='processaadmin.php?idusuario=".$idusuario."&tipousuario=".$idtipousuario."'>".$tipousuario."</a>
+				 	</div>
+				 	<div class='col-md-1'></div>
+				</div>
+					";
 		}
-		echo "</table>";
+		echo "</table>
+			  	<div class='col-md-1'></div>
+			  </div>";
 	?>
 	</div>
 </body>
