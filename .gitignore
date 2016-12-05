@@ -1,5 +1,6 @@
 # Project config
 .idea/
+nbproject/
 
 # Windows image file caches
 Thumbs.db
