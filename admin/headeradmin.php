@@ -1,14 +1,6 @@
 <div class="row">
     <div class="col-md-12">
-        <nav class="navbar navbar-default" role="navigation">
-            <div class= "navbar-header">
-                <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
-                    <span class="sr-only">Toggle navigation</span><span class="icon-bar"></span><span class="icon-bar"></span>
-                    <span class="icon-bar"></span>
-                </button>
-                <a class="navbar-brand" href="https://www.google.com.br/maps/@-26.2957939,-48.578168,11z">São Francisco do Sul</a>
-            </div>
-                
+        <nav class="navbar navbar-default" role="navigation">   
             <div class="dropdown">
                 <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
                     <ul class="nav navbar-nav">

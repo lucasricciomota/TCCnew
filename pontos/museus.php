@@ -14,7 +14,8 @@
     <meta name="description" content="">
     <meta name="author" content="">
     <style type="text/css">
-        .modal.modal-wide .modal-dialog {width: 98%;}
+
+        .modal.modal-wide .modal-dialog {width: 95%;}
         .modal-wide .modal-body {overflow-y: auto;}
 
         /* irrelevant styling */
@@ -29,6 +30,34 @@
         }
         .thumbnails li img{
             width: 60px;
+        }
+        .jumbotron{
+            padding-bottom:10px;
+            padding-top:10px;
+        }
+        .modal-header{
+            padding:10px;
+        }
+        .modal-body{
+            padding:5px;
+        }
+        .container-fluid .jumbotron {
+            padding-right: 10px;
+            padding-left: 10px;
+        }
+        ul, menu, dir {
+            -webkit-padding-start: 0px;
+        }
+        .thumbnails li img {
+            width: 60px;
+            height: 60px;
+        }
+        .img{
+            height:598px;
+        }
+        .rowmuseus{
+            margin-right: 15px;
+            margin-left: 15px;
         }
 
     </style>
@@ -51,8 +80,10 @@
                     group by p.idponto, p.nome;";
             $resultado = mysqli_query($conexao, $sql);
             $contador = 0;
+            $contadorimg = 0;
             while ($linha = mysqli_fetch_array($resultado)) {
                 $contador = $contador + 1;
+                $contadorimg = $contadorimg + 1;
                 $id = $linha["idponto"];
                 $nome = $linha["nome"];
                 $fotos = $linha["fotos"];
@@ -71,33 +102,34 @@
                                       <div class='modal-dialog'>
                                         <div class='modal-content'>
                                           <div class='modal-header'>
-                                            <button type='button' class='close' data-dismiss='modal' aria-hidden='true'>&times;</button>
-                                            <h4 class='modal-title'>Modal title</h4>
+                                            <button type='button' class='close' data-dismiss='modal' aria-hidden='true'>&times;</button></br>
                                           </div>
                                           <div class='modal-body'>
-                                            <div class='row'>
+                                            <div class='rowmuseus'>
                                                 <script>
                                                     function mudar(id_el, url_img){
-                                                        $(id_el).attr('src', url_img;
+                                                        $(id_el).attr('src', url_img);
                                                     }
                                                 </script>
-                                                <div class='col-md-1'></div>
-                                                <div class='col-md-5 jumbotron'>Imagem e Galeria
+                                               
+                                                <div class='col-md-6 jumbotron'>Imagem e Galeria
                                                     <div class='main-image'>
                                                         <img src='$fotos' alt='Placeholder' class='custom' id='imgPrincipal$contador'>
                                                     </div>
                                                     <ul class='thumbnails'>
-                                                        <li><img src='$fotos' alt='Thumbnails' onclick='mudar(\"#imgPrincipal$contador\", this.src)'></li>
-                                                        <li><img src='../img/img-02-tn.jpg' alt='Thumbnails' onclick='mudar(\"#imgPrincipal$contador\", this.src)'></li>
-                                                        <li><img src='../img/img-03-tn.jpg' alt='Thumbnails' onclick='mudar(\"#imgPrincipal$contador\", this.src)'></li>
+                                                        <li><img src='$fotos' alt='Thumbnails' width='598px' onclick='mudar(\"#imgPrincipal$contadorimg\", this.src)'></li>
+                                                        <li><img src='../img/img-02-tn.jpg' alt='Thumbnails onclick='mudar(\"#imgPrincipal$contadorimg\", this.src)'></li>
+                                                        <li><img src='../img/img-03-tn.jpg' alt='Thumbnails' onclick='mudar(\"#imgPrincipal$contadorimg\", this.src)'></li>
                                                     </ul>
 
                                                       <script src='https://ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js'></script>
 
                                                 </div>
-                                                <div class='col-md-5 jumbotron'>
+                                                <div class='col-md-6 jumbotron'>
                                                     <div class='row''>
-                                                        <div class='col-md-12'>Nome do Ponto</div>
+                                                        <div class='col-md-12'>
+                                                            $nome
+                                                        </div>
                                                     </div>
                                                     <div class='row'>
                                                         <div class='col-md-12'>Avaliação</div>
@@ -106,7 +138,7 @@
                                                         <div class='col-md-12'>Informações</div>
                                                     </div>
                                                 </div> 
-                                                <div class='col-md-1'></div>    
+                                                   
                                             </div>
                                           </div>
                                         </div><!-- /.modal-content -->

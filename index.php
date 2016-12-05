@@ -4,53 +4,37 @@
   <title>São Francisco do Sul</title>
   <link href="css/bootstrap.min.css" rel="stylesheet">
   <link href="css/style.css" rel="stylesheet">
-  <link href="vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
-  <link href="css/freelancer.min.css" rel="stylesheet">
+
   <script src="js/jquery.min.js"></script>
   <script src="js/bootstrap.min.js"></script>
   <script src="js/scripts.js"></script>
   <style type="text/css">
-    footer {
-    position: fixed;
-    height: 300px;
-    bottom: 0;
-    width: 100%;
-    color: black;
-}    
-    glyphicon-chevron-left{
-    color:white;
-    position:bottom !important;
+    div.row{
+      margin-right: 0;
+      margin-left: 0;
     }
-
-
   </style>
 </head>
 <body>
- <div class="row">
-    <div class="col-sm-10 col-sm-offset-1 text-center">
-      <h1 class="titulo1">São Francisco do Sul</h1>
-    </div>
-  </div>
-
   <div>
     <?php 
       session_start();
       if (isset($_SESSION["idtipousuario"])) {
         $idtipousuario = $_SESSION["idtipousuario"];
         if ($idtipousuario == "1") {
-          require_once("Admin/headeradmin.php");
+          include("admin/headeradmin.php");
         }
         if ($idtipousuario == "2") {
-          require_once("header.php");
+          include("header.php");
         }
       }
       else {
-        require_once("header.php");
+        include("header.php");
 
       }
     ?>
   </div>
-		
+
    <div id="carousel-example-generic" class="carousel slide" data-ride="carousel">
   <!-- Indicators -->
   <ol class="carousel-indicators">
@@ -87,10 +71,18 @@
   <a class="right carousel-control" href="#carousel-example-generic" role="button" data-slide="next">
     <span class="glyphicon glyphicon-chevron-right"></span>
   </a>
-
-    <div class="footer navbar navbar-inverse navbar-fixed-bottom" role="navigation">
-      <div class="col-md12"><h4>Donec sed augue cursus mi ultricies rutrum egestas sit amet ipsum. Ut vel finibus risus. Vestibulum convallis eros ac bibendum aliquam. Cras eget nibh lorem. Sed libero elit, bibendum et luctus eu, ultrices quis lorem. Ut at molestie metus. Mauris rhoncus lectus in commodo consectetur. In ultricies hendrerit quam a interdum. Donec at auctor purus. Fusce semper luctus ex nec hendrerit. Vivamus semper est id erat facilisis, eu scelerisque est aliquet. Ut ut ante vel erat dictum convallis non vitae augue.</h4></div>
+  </div>
+  <div class="row">
+    <div class="row">
+      <h1 class="titulo1 text-center">São Francisco do Sul</h1>
     </div>
+    <div class="row">
+      <div class="col-md-1"></div>
+      <div class="col-md-10 jumbotron"><h3>Quem Somos</h3></div>
+      <div class="col-md-1"></div>
+    </div>
+  </div> 
+  
     <!-- <footer>
     <div class="container footerWrap">
       <div class="row">
@@ -148,8 +140,6 @@
       </div>
     </div>
   </footer> -->
-
-  </div>
 </body>
 </html>
 

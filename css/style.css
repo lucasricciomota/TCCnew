@@ -24,13 +24,13 @@
 
 section {
     padding: 50px !important;
+  }
+
+
+.navbar{
+  margin-bottom: 5px !important
+
 }
-
-
-
-
-
-
 
 
 
@@ -113,6 +113,7 @@ body * {
   display: inline-block;
   padding: 5px;
 }
+
 #pager span {
   border-radius: 10px;
   background: #ccc;
