@@ -13,41 +13,41 @@
                                 <span class="caret"></span>
                             </a>
                                 <ul class="dropdown-menu">
-                                    <li><a href="pontos/trilhas.php">Trilhas</a></li>
+                                    <li><a href="/TCCnew/app/src/pontos/trilhas.php">Trilhas</a></li>
                                         <li role="separator" class="divider"></li>
-                                    <li><a href="pontos/ilhas.php">Ilhas</a></li>
+                                    <li><a href="/TCCnew/app/src/pontos/ilhas.php">Ilhas</a></li>
                                         <li role="separator" class="divider"></li>
-                                    <li><a href="pontos/praias.php">Praias</a></li>
+                                    <li><a href="/TCCnew/app/src/pontos/praias.php">Praias</a></li>
                                         <li role="separator" class="divider"></li>
-                                    <li><a href="pontos/lazer.php">Lazer</a></li>
+                                    <li><a href="/TCCnew/app/src/pontos/lazer.php">Lazer</a></li>
                                         <li role="separator" class="divider"></li>
-                                    <li><a href="pontos/radical.php">Radical</a></li>
+                                    <li><a href="/TCCnew/app/src/pontos/radical.php">Radical</a></li>
                                         <li role="separator" class="divider"></li>
-                                    <li><a href="pontos/museus.php">Museus</a></li>
+                                    <li><a href="/TCCnew/app/src/pontos/museus.php">Museus</a></li>
                                 </ul>
                             </li>
                             <li>
-                                <a href="./Restaurantes/restaurantes.php">Restaurantes</a>
+                                <a href="/TCCnew/app/src/Restaurantes/restaurantes.php">Restaurantes</a>
                             </li>
                             <li>
-                                <a href="historia/historia.php">História</a>
+                                <a href="/TCCnew/app/src/historia/historia.php">História</a>
                             </li>
                             <li class="dropdown">
-                            <a href="pontos.php" type="button" class="dropdown-toggle" data-toggle="dropdown" role="onmouseover" aria-haspopup="true" aria-expanded="false">
+                            <a href="#" type="button" class="dropdown-toggle" data-toggle="dropdown" role="onmouseover" aria-haspopup="true" aria-expanded="false">
                                     Hotéis
                                 <span class="caret"></span>
                             </a>
                                 <ul class="dropdown-menu">
-                                    <li><a href="./hoteis/pousadas.php">Pousadas</a></li>
+                                    <li><a href="/TCCnew/app/src/hospedagens/pousadas.php">Pousadas</a></li>
                                         <li role="separator" class="divider"></li>
-                                    <li><a href="app/src/pontos/hoteis.php">Hotéis</a></li>
+                                    <li><a href="/TCCnew/app/src/hospedagens/pontos/hoteis.php">Hotéis</a></li>
                                         <li role="separator" class="divider"></li>
-                                    <li><a href="app/src/pontos/camping.php">Camping</a></li>
+                                    <li><a href="/TCCnew/app/src/hospedagens/pontos/camping.php">Camping</a></li>
                                         <li role="separator" class="divider"></li>
                                 </ul>
                             </li>                          
                             <li>
-                                <a href="quem somos/quem somos.php">Quem somos?</a>
+                                <a href="/TCCnew/app/src/quem somos/quem somos.php">Quem somos?</a>
                             </li>
                         </ul>
                     </div>

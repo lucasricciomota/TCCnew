@@ -2,27 +2,20 @@
 <html>
 <head>
     <meta charset="utf-8">
-	<title>São Francisco do Sul
-    </title>
-    <link href="../public/css/bootstrap.min.css" rel="stylesheet">
-    <link href="../public/css/style.css" rel="stylesheet">
-    <script src="../public/js/jquery.min.js"></script>
-    <script src="../public/js/bootstrap.min.js"></script>
-    <script src="../public/js/scripts.js"></script>
+	<title>São Francisco do Sul</title>
+    <link href="/TCCnew/public/css/bootstrap.min.css" rel="stylesheet">
+    <link href="/TCCnew/public/css/freelancer.min.css" rel="stylesheet">
+    <link href="/TCCnew/public/css/style.css" rel="stylesheet">
 </head>
 <body>
-	
-  <?php require_once("../header.php");?>  
-            
-        
-	<div class="row hist jumbotron">
+    <?php include("../header.php");?>
+    <div class="row hist jumbotron">
         <div class="col-md-1"></div>
-        <h1>História</h1>        
         <div class="col-md-7">
-        </div>    
+            <h1>História</h1>
+        </div>
         <div class="col-md-4"></div>
-	</div>
-    
+    </div>
     <div class="row">
         <div class="col-md-1"></div>
         <div class="col-md-4 texto">
@@ -33,7 +26,7 @@
                 Finalmente em 1847 é elevada a categoria de cidade.
             </h4>  
         </div>
-        <div class="col-md-1"></div>        
+        <div class="col-md-2"></div>
         <div class="col-md-4 texto">
             <h4>A teoria de que São Francisco do Sul foi descoberta pelos franceses nunca foi provada. 
                 Nem o nome da ilha ou mesmo a exata localização da portagem de Gonneville consta na relação completa da viagem escrita por ele mesmo.
@@ -41,12 +34,10 @@
                 A história documentada da viagem relata que em 24 de Junho de 1503, partiu do porto de Honfleur, França, a expedição de Binot Paulmier de Gonneville, a bordo do veleiro L'Espoir. Seis meses após sua partida da França, a expedição descobriu uma grande terra, que devido a vento terral contrário, só puderam aportar na tarde do dia seguinte. Segundo o pesquisador Oswaldo Rodrigues Cabral, em sua obra "História de Santa Catarina", a terra era descrita como fertilíssimo, abundante em animais, aves, peixes e árvores, e povoada por índios carijós, que "procuravam apenas passar a vida alegre, sem grande trabalho, vivendo da caça e da pesca, e do produto espontâneo da terra, e de alguns legumes e raízes que plantavam".
             </h4>  
         </div>
-        <div class="col-md-2"></div>
+        <div class="col-md-1"></div>
     </div>
-        
-    
-    
-        </div>  
+    <script src="/TCCnew/public/js/jquery.min.js"></script>
+    <script src="/TCCnew/public/js/bootstrap.min.js"></script>
+    <script src="/TCCnew/public/js/scripts.js"></script>
 </body>
-
 </html>

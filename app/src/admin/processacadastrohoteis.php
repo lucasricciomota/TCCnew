@@ -12,7 +12,7 @@ require_once("../conexao.php");
     $longitude = $_POST ['longitude'];
     $tipohospedagem = $_POST ['tipohospedagem']; 
         $sintaxesql = "SELECT * FROM hospedagem WHERE nome = '$nome'";
-        $resultado = mysqli_query($conexao,$sintaxesql);
+        $resultado = mysqli_query($connection,$sintaxesql);
         $quantidadedelinhas = mysqli_num_rows($resultado);
         if ($quantidadedelinhas == 1){
             echo ("Este hotel já está cadastrado");
@@ -21,7 +21,7 @@ require_once("../conexao.php");
     $sintaxesql = "INSERT INTO hospedagem (nome,email,telefone,endereco,descricao,site,HoraAtendimento,latitude,longitude,idTipoHospedagem) 
     VALUES ('$nome','$email','$telefone','$endereco','$descricao','$site','$hora','$latitude','$longitude','$tipohospedagem')";
     echo $sintaxesql;
-    $cadastrar = mysqli_query($conexao, $sintaxesql);
+    $cadastrar = mysqli_query($connection, $sintaxesql);
     header("location:cadastrohoteis.php");
             }
           

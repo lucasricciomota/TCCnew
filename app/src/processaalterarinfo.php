@@ -14,7 +14,7 @@
 	else if(md5($senha) == md5($senha2)){
 		$novaSenha = md5($senha);
 	$sql = "UPDATE usuario SET nome = '$nome', email= '$email', telefone = '$telefone' , senha = '$novaSenha', WHERE  idusuario = '$idusuario';";
-	$resultado = mysqli_query($conexao, $sql);
+	$resultado = mysqli_query($connection, $sql);
 	if ($resultado == true) {
 		$_SESSION["nome"] = $nome;
 	}

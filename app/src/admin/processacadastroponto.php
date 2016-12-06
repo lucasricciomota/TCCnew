@@ -10,7 +10,7 @@
 
     $sintaxesql = "SELECT * FROM ponto WHERE nome = '$nomeponto';";
     echo $sintaxesql;
-    $resultado = mysqli_query($conexao,$sintaxesql);
+    $resultado = mysqli_query($connection,$sintaxesql);
     $quantidadedelinhas = mysqli_num_rows($resultado);
     if ($quantidadedelinhas == 1){
         echo ("Este Ponto já está cadastrado");
@@ -21,11 +21,11 @@
             $sql = "INSERT into ponto (descricao, endereco, idTipoPonto, nome, latitude, longitude)
                     VALUES ('$descricao', '$endereco', '$tipoponto', '$nomeponto', '$latitude', '$longitude');";
             echo $sql;
-            $resultado = mysqli_query($conexao, $sql);
+            $resultado = mysqli_query($connection, $sql);
             if ($resultado == true) {
                 $sql = "SELECT max(idponto) as idponto from ponto;";
-                $resultado = mysqli_query($conexao, $sql);
-                $idponto = mysqli_insert_id($conexao);
+                $resultado = mysqli_query($connection, $sql);
+                $idponto = mysqli_insert_id($connection);
                 if ($resultado == true) {
                     while ($linha = mysqli_fetch_array($resultado)) {
                         $idponto = $linha["idponto"];
@@ -57,7 +57,7 @@
                     {
                         $sql = "INSERT into midia (fotos, idponto, principal) VALUES ('$destino', '$idponto', 1);";
                         echo $sql;
-                        $resultado = mysqli_query($conexao, $sql);
+                        $resultado = mysqli_query($connection, $sql);
 
                     }
                     else
@@ -101,7 +101,7 @@
                         if( @move_uploaded_file( $arquivo_tmp, $destino ))
                         {
                             $sql = "INSERT into midia (fotos, idponto, principal) VALUES ('$destino', '$idponto', 0);";
-                            $resultado = mysqli_query($conexao, $sql);
+                            $resultado = mysqli_query($connection, $sql);
 
                             if ($resultado == true) {
                                 header("location:cadastroponto.php");

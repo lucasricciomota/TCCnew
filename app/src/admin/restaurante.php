@@ -32,7 +32,7 @@
 				from restaurante r, 
 				where r.idRestaurante
 				order by r.nome;";
-		$resultado = mysqli_query($conexao, $sql);
+		$resultado = mysqli_query($connection, $sql);
 		echo "<table>
 				<tr>
 					<td>Identificação</td>

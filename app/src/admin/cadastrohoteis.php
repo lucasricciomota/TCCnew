@@ -121,7 +121,7 @@
                         <?php
                             require_once("../conexao.php");
                             $sql = "select * from tipohospedagem order by descricao;";
-                            $resultado = mysqli_query($conexao, $sql);
+                            $resultado = mysqli_query($connection, $sql);
                             while ($linha = mysqli_fetch_array($resultado)) {
                                 $id = $linha["idTipoHospedagem"];
                                 $descricao = $linha["descricao"];

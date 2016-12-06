@@ -28,7 +28,7 @@
 	<?php
 		require_once("../conexao.php");
 		$sql = "select * from usuario order by nome;";
-		$resultado = mysqli_query($conexao, $sql);
+		$resultado = mysqli_query($connection, $sql);
 		echo "<table>
 				<tr>
 					<td>Nome</td>

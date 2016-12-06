@@ -10,7 +10,7 @@
 	}
 	$sql = "update Usuario set bloqueado = '$novostatus'
 			where idusuario = $idusuario;";
-	$resultado = mysqli_query($conexao, $sql);
+	$resultado = mysqli_query($connection, $sql);
 	if ($resultado == true) {
 		header("location:usuarios.php");
 	}

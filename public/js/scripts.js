@@ -1,5 +1,4 @@
-// Arquivo JS vazio para ser utilizado para seu próprio JS, caso necessário.$(function() {
-  $('#carousel').carouFredSel({
+$('#carousel').carouFredSel({
     responsive: true,
     items: {
       visible: 1,
@@ -12,5 +11,4 @@
       fx: 'uncover-fade'
     },
     pagination: '#pager'
-  });
 });

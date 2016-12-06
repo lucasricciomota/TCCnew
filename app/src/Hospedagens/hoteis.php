@@ -3,11 +3,8 @@
 <head>
     <meta charset="utf-8">
 	<title>Hotéis</title>
-    <link href="../public/css/bootstrap.min.css" rel="stylesheet">
-    <link href="../public/css/style.css" rel="stylesheet">
-    <script src="../public/js/jquery.min.js"></script>
-    <script src="../public/js/bootstrap.min.js"></script>
-    <script src="../public/js/scripts.js"></script>
+    <link href="/TCCnew/public/css/bootstrap.min.css" rel="stylesheet">
+    <link href="/TCCnew/public/css/style.css" rel="stylesheet">
 </head>
 <body>
 	<?php require_once("../header.php");?>
@@ -24,7 +21,7 @@
                         from hospedagem h left join midia m on h.idHospedagem = h.idHospedagem
                         where idHospedagem = 1
                         group by h.idHospedagem, h.nome;";
-            $resultado = mysqli_query($conexao, $sql);
+            $resultado = mysqli_query($connection, $sql);
             $contador = 0;
             while ($linha = mysqli_fetch_array($resultado)) {
                 $contador = $contador + 1;
@@ -64,6 +61,9 @@
                         </div>";
                 }
             ?> 
-        </div> 
+        </div>
+        <script src="../public/js/jquery.min.js"></script>
+        <script src="../public/js/bootstrap.min.js"></script>
+        <script src="../public/js/scripts.js"></script>
     </body>
 </html>

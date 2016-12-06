@@ -5,7 +5,7 @@
         $email = $_POST["email"];
         $senha = $_POST["senha"];
         $sintaxesql = "select * from usuario where email = '$email' and senha = md5('$senha')";
-        $resultado = mysqli_query($conexao, $sintaxesql);
+        $resultado = mysqli_query($connection, $sintaxesql);
         if ($resultado) {
             if (mysqli_num_rows($resultado) > 0) {
                 while ($linha = mysqli_fetch_array($resultado)) {
@@ -21,7 +21,7 @@
             }
         }
         else {
-            echo "Erro: " . mysqli_error($conexao);
+            echo "Erro: " . mysqli_error($connection);
         }
     }
 ?>
