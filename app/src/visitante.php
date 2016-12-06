@@ -153,7 +153,7 @@
   <!-- Wrapper for slides -->
   <div class="carousel-inner">
     <div class="item active">
-      <img src="../../imagens/1.jpg" alt="...">
+      <img src="../../images/1.jpg" alt="...">
       <div class="carousel-caption">
       </div>
     </div>

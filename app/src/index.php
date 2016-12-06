@@ -3,34 +3,25 @@
     <meta charset="utf-8">
     <title>São Francisco do Sul</title>
     <link rel="stylesheet" type="text/css" href="../../public/css/bootstrap.min.css">
-    <link rel="stylesheet" type="text/css" href="../../public/css/fonts.css">
     <link rel="stylesheet" type="text/css" href="../../public/css/style.css">
-    <style type="text/css">
-        div.row{
-            margin-right: 0;
-            margin-left: 0;
-        }
-    </style>
 </head>
 <body>
-    <div>
-        <?php
-        session_start();
-        if (isset($_SESSION["idtipousuario"])) {
-            $idtipousuario = $_SESSION["idtipousuario"];
-            if ($idtipousuario == "1") {
-                include("admin/headeradmin.php");
-            }
-            if ($idtipousuario == "2") {
-                include("header.php");
-            }
+    <?php
+    session_start();
+    if (isset($_SESSION["idtipousuario"])) {
+        $idtipousuario = $_SESSION["idtipousuario"];
+        if ($idtipousuario == "1") {
+            include("admin/headeradmin.php");
         }
-        else {
+        if ($idtipousuario == "2") {
             include("header.php");
-
         }
-        ?>
-    </div>
+    }
+    else {
+        include("header.php");
+    }
+    session_destroy();
+    ?>
 
     <div id="carousel-example-generic" class="carousel slide" data-ride="carousel">
         <!-- Indicators -->
@@ -43,18 +34,18 @@
         <!-- Wrapper for slides -->
         <div class="carousel-inner">
             <div class="item active">
-                <img src="../../imagens/1.jpg" alt="...">
+                <img src="../../images/1.jpg" alt="...">
                 <div class="carousel-caption">
                 </div>
             </div>
             <div class="item">
-                <img src="../../imagens/2.jpg" alt="...">
+                <img src="../../images/2.jpg" alt="...">
                 <div class="carousel-caption">
 
                 </div>
             </div>
             <div class="item">
-                <img src="../../imagens/3.jpg" alt="...">
+                <img src="../../images/3.jpg" alt="...">
                 <div class="carousel-caption">
 
                 </div>
@@ -75,7 +66,7 @@
         </div>
         <div class="row">
             <div class="col-md-1"></div>
-            <div class="col-md-10 jumbotron"><h3>Quem Somos</h3></div>
+            <div class="col-md-10"><h3>Quem Somos</h3></div>
             <div class="col-md-1"></div>
         </div>
     </div>
