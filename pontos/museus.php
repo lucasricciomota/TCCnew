@@ -69,8 +69,8 @@
             function mudar(id_el, url_img){
                 $(id_el).attr('src', url_img);
             }
-            function mostrarModal(){
-
+            function mostrarModal(id){
+                var museu = $linhas.filter(function (v, i){ return v.idponto == id });
             }
         </script>
         <div class="container-fluid">
@@ -95,18 +95,31 @@
                     </div>
                     <div class='col-md-6 jumbotron'>
                         <div class='row''>
-                            <div class='col-md-12'>
-                                $nome
-                            </div>
+                            <div class='col-md-12'>$nome</div>
                         </div>
                         <div class='row'>
-                            <div class='col-md-12'>Avaliação</div>
+                            <div class='col-md-12' id='idavaliação'>Avaliação</div>
                         </div>
                         <div class='row'>
-                            <div class='col-md-12'>Informações</div>
+                            <div class='col-md-12' id='idinfor'>Informações</div>
                         </div>
                     </div> 
                        
+                </div>
+                <div class="row">
+                    <div id="map"></div>
+                    <script type="text/javascript">
+                        var map;
+                        function initMap() {
+                          map = new google.maps.Map(document.getElementById('map'), {
+                            center: {lat: -34.397, lng: 150.644},
+                            zoom: 8
+                          });
+                        }
+                    </script>
+                    <script async defer
+                      src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDS6Y37V8-TuqQ70bfgNQ6q-aAgmikJ9NM&callback=initMap">
+                    </script>
                 </div>
               </div>
             </div><!-- /.modal-content -->
@@ -178,60 +191,3 @@
         </div>    
     </body>
 </html>
-
-<!--
-   //     if ($contador == 1) {
-            //         echo "<div class='row'>
-            //                 <div class='col-md-1'></div>
-            //                 <div class='col-md-10'>";
-            //     }
-            //     echo "<div class='col-md-4'>
-            //                 <div class='col-md-1'>
-            //                 </div>
-            //                 <div class='col-md-10'>
-            //                     <div class='row'><img src='$fotos' class='img-responsive'></div>
-            //                     <div class='row'>$nome</div>
-            //                 </div>
-            //                 <div class='col-md-1'>
-            //                 </div>
-            //             </div>";
-            //     if ($contador == 3) {
-            //         echo "  </div>
-            //             <div class='col-md-1'></div>
-            //             </div>";
-            //         $contador = 0;
-            //     }
-            // }
-            // if ($contador == 1) {
-            //     echo "<div class='col-md-8'></div>";
-            //     echo "  </div>
-            //         <div class='col-md-1'></div>
-            //         </div>";
-            // }
-            // if ($contador == 2) {
-            //     echo "<div class='col-md-4'></div>";
-            //     echo "  </div>
-            //         <div class='col-md-1'></div>
-            //         </div>";
-            // }
--->
-
-       <!--  // if ($contador%3 == 0){ 
-                // echo"<div class='row'>";    
-                // }
-
-                // echo "<div class='col-sm-4'>
-                //         <a href='#portfolioModal1' class='portfolio-link' data-toggle='modal'>
-                //             <div class='caption'>
-                //                 <div class='caption-content'></div>
-                //             </div>
-                //             <img src='$fotos' class='img-responsive' alt=''>
-                //         </a>
-                //         <div class='row portfolio-link portfolio-item'>
-                //             $nome
-                //         </div>
-                //     </div>";
-
-                // if ($contador%3 == 0){ 
-                // echo"</div>";    
-                // } -->

@@ -10,6 +10,7 @@
     <script src="../js/jquery.min.js"></script>
     <script src="../js/bootstrap.min.js"></script>
     <script src="../js/scripts.js"></script>
+    <script src="../js/mascara.js"></script>
 </head>
 <body>   
     <?php require_once("../header.php");?>
@@ -22,7 +23,7 @@
         <div class="col-md-4"></div>
     </div>
          
-    <form action="processacadastro.php" method="post">    
+    <form action="processacadastro.php" method="post" name="form1">    
         <div class="row">
             <div class="col-md-4"></div>
             <div class="col-md-4">
@@ -57,7 +58,7 @@
                      <span class="input-group-addon" id="basic-addon2">
                         <span class="glyphicon glyphicon-phone"></span>                     
                      </span>
-                     <input type="text" class="form-control" placeholder="Telefone" name="telefone" aria-describedby="basic-addon2" required>
+                     <input type="text" class="form-control" placeholder="Telefone" name="tel" aria-describedby="basic-addon2" onKeyPress="MascaraTelefone(form1.tel);" required>
                 </div>
             </div>
             <div class="col-md-4"></div>
@@ -122,7 +123,7 @@
         <div class="row">
             <div class="col-md-4"></div>
             <div class="col-md-3">                  
-                <h3>Senha:</h3>
+                <h4>Senha:</h4>
                     <div class="input-group">
                         <span class="input-group-addon" id="basic-addon4">
                         <span class="glyphicon glyphicon-lock"></span> 
@@ -137,7 +138,7 @@
         <div class="row">
             <div class="col-md-4"></div>
             <div class="col-md-3">                  
-                <h3>Digite a sua senha novamente :</h3>
+                <h4>Digite a sua senha novamente:</h4>
                     <div class="input-group">
                         <span class="input-group-addon" id="basic-addon4">
                         <span class="glyphicon glyphicon-lock"></span> 

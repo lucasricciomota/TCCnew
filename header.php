@@ -41,7 +41,7 @@
                             </li>
                             <li class="dropdown">
                             <a href="pontos.php" type="button" class="dropdown-toggle" data-toggle="dropdown" role="onmouseover" aria-haspopup="true" aria-expanded="false">
-                                    Hotéis
+                                    Hospedagens
                                 <span class="caret"></span>
                             </a>
                                 <ul class="dropdown-menu">
@@ -49,7 +49,7 @@
                                         <li role="separator" class="divider"></li>
                                     <li><a href="/TCCnew/Hospedagens/hoteis.php">Hotéis</a></li>
                                         <li role="separator" class="divider"></li>
-                                    <li><a href="/TCCnew/Hospedagens/camping.php">Camping</a></li>
+                                    <li><a href="/TCCnew/Hospedagens/campings.php">Camping</a></li>
                                         <li role="separator" class="divider"></li>
                                 </ul>
                             </li>                          

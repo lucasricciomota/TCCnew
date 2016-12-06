@@ -15,12 +15,12 @@
   <?php require_once("../header.php");?>  
             
         
-	<div class="row hist jumbotron">
+	<div class="row hist">
         <div class="col-md-1"></div>
-        <h1>História</h1>        
-        <div class="col-md-7">
+        <div class="col-md-10">
+            <h3>História</h3> 
         </div>    
-        <div class="col-md-4"></div>
+        <div class="col-md-1"></div>
 	</div>
     
     <div class="row">

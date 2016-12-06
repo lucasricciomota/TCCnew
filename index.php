@@ -4,7 +4,7 @@
   <title>São Francisco do Sul</title>
   <link href="css/bootstrap.min.css" rel="stylesheet">
   <link href="css/style.css" rel="stylesheet">
-  <!-- <link href="css/stylefooter.css" rel="stylesheet"> -->
+  <link href="css/stylefooter.css" rel="stylesheet">
   <script src="js/jquery.min.js"></script>
   <script src="js/bootstrap.min.js"></script>
   <script src="js/scripts.js"></script>
@@ -26,7 +26,6 @@
     height: 470px;
     margin: auto;
     }
-
 
   </style>
 </head>
@@ -97,7 +96,7 @@
     <div class="col-md-1"></div>
     <div class="col-md-10"><h3>Quem Somos?</h3></br><h4>Somos estudantes formados no curso técnico de Informática integrado com o Ensino Médio do Instituto Federal de Ciência e Tecnologia do campus de Araquari, e como moradores de São Francisco do Sul conhecemos a falta de acesso e de informação sobre a cidade que é tão bela, mas não aproveitada ao máximo. Além disso, vemos também a quantidade de turistas que frequantam as praias e os pontos históricos de São Francisco anualmente e não conseguem se encontrar com facilidade, deixando passar boas experiências e ótimos lugares para se conhecer. Assim desenvolvemos este site com o objetivo de integrar tanto os turistas como o moradores para que conheçam mais da cidade e desfrutem ao máximo dos recursos que ela tem para oferecer.</h4> </div>
     <div class="col-md-1"></div>
-  </div> 
+  </div></br>
   
 
 <!--   <footer>
@@ -142,24 +141,15 @@
   </div>
 </footer> -->
 <!--footer start from here-->
-
-<div class="copyright">
-  <div class="container">
-    <div class="col-md-6">
-      <p>© 2016 - All Rights with blá</p>
-    </div>
-    <div class="col-md-6">
-      <ul class="bottom_ul">
-        <li><a href="#">webenlance.com</a></li>
-        <li><a href="#">About us</a></li>
-        <li><a href="#">Blog</a></li>
-        <li><a href="#">Faq's</a></li>
-        <li><a href="#">Contact us</a></li>
-        <li><a href="#">Site Map</a></li>
-      </ul>
-    </div>
+<div class="row">
+  <div class="col-md-2"></div>
+  <div class="col-md-8">
+    <iframe width="854" height="480" src="https://www.youtube.com/embed/OMJTAZLH9lE" frameborder="0" allowfullscreen></iframe>
   </div>
-</div>
+  <div class="col-md-2"></div>
+</div></br>
+
+<?php include("footer.php");?>
 </body>
 </html>
 
