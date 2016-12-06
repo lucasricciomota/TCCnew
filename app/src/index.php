@@ -5,7 +5,7 @@
     <link rel="stylesheet" type="text/css" href="../../public/css/bootstrap.min.css">
     <link rel="stylesheet" type="text/css" href="../../public/css/fonts.css">
     <link rel="stylesheet" type="text/css" href="../../public/css/style.css">
-<!--    <link rel="stylesheet" type="text/css" href="../../public/css/carousel.css">-->
+    <!--    <link rel="stylesheet" type="text/css" href="../../public/css/carousel.css">-->
     <style type="text/css">
         div.row{
             margin-right: 0;
