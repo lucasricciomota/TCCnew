@@ -12,7 +12,7 @@
 </head>
 <body>  
 
-    <?php require_once("headeradmin.php");?>
+    <?php session_start(); include("headeradmin.php");?>
 
     <div class="row">
         <div class="col-md-4"></div>

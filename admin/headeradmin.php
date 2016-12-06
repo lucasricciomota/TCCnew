@@ -41,7 +41,6 @@
                     </ul>
                     <ul class="nav navbar-nav navbar-right">
                         <?php
-                        
                             if (isset($_SESSION["idusuario"])) {
                                     echo "Olá, ".$_SESSION["nomeusuario"];
                                     echo "<a href='logout.php'>Sair</a>";
