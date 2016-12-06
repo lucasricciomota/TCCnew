@@ -54,9 +54,6 @@
                                 </ul>
                             </li>                          
                             <li>
-                                <a href="/TCCnew/quem somos/quem somos.php">Quem somos?</a>
-                            </li>
-                            <li>
                                 <a type="button" data-toggle="modal" data-target="#myModal">Alterar Informações</a>
 
                                   <!-- Modal -->
