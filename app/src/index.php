@@ -42,18 +42,18 @@
                 <!-- Wrapper for slides -->
                 <div class="carousel-inner">
                     <div class="item active">
-                        <img src="../../imagens/1.jpg" alt="...">
+                        <img src="../../images/1.jpg" alt="...">
                         <div class="carousel-caption">
                         </div>
                     </div>
                     <div class="item">
-                        <img src="../../imagens/2.jpg" alt="...">
+                        <img src="../../images/2.jpg" alt="...">
                         <div class="carousel-caption">
 
                         </div>
                     </div>
                     <div class="item">
-                        <img src="../../imagens/3.jpg" alt="...">
+                        <img src="../../images/3.jpg" alt="...">
                         <div class="carousel-caption"></div>
                     </div>
                 </div>
@@ -68,13 +68,13 @@
             </div>
         </div>
 
-        <div class="row content">
+        <div class="row container-block">
             <div class="col-md-1"></div>
             <div class="col-md-10">
                 <div class="row">
-                    <h1 class="titulo1 text-center">São Francisco do Sul</h1>
+                    <h1 class="title text-center">São Francisco do Sul</h1>
                 </div>
-                <div class="row">
+                <div class="row content">
                     <div class="col-md-5">
                         <h3>Quem Somos?</h3>
                         <h4>Somos estudantes formados no curso técnico de Informática integrado com o Ensino Médio
@@ -87,8 +87,8 @@
                             conheçam mais da cidade e desfrutem ao máximo dos recursos que ela tem para oferecer.</h4>
                     </div>
                     <div class="col-md-2"></div>
-                    <div class="col-md-5">
-                        <iframe width="100%" height="420" src="https://www.youtube.com/embed/OMJTAZLH9lE" frameborder="0" allowfullscreen></iframe>
+                    <div class="col-md-5 video">
+                        <iframe width="100%" height="50%" src="https://www.youtube.com/embed/OMJTAZLH9lE" frameborder="0" allowfullscreen></iframe>
                     </div>
                 </div>
             </div>
@@ -98,4 +98,4 @@
         <script src="../../public/js/bootstrap.min.js"></script>
         <script src="../../public/js/scripts.js"></script>
     </body>
-</html>
+</html>x
