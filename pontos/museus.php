@@ -14,7 +14,6 @@
     <meta name="description" content="">
     <meta name="author" content="">
     <style type="text/css">
-
         .modal.modal-wide .modal-dialog {width: 95%;}
         .modal-wide .modal-body {overflow-y: auto;}
 
@@ -70,7 +69,7 @@
                 $(id_el).attr('src', url_img);
             }
             function mostrarModal(id){
-                var museu = $linhas.filter(function (v, i){ return v.idponto == id });
+                var museu = $linhas.filter(function (v, i){ return v.idponto == id })
             }
         </script>
         <div class="container-fluid">
@@ -159,9 +158,9 @@
                             <div class='col-md-1'>
                             </div>
                             <div class='col-md-10'>
-                                <div class='row'><a onclick='mostrarModal('$id')'><img src='$fotos' class='img-responsive'></a>
+                                <div class='row'><a onclick='mostrarModal(" . $id . ")'><img src='$fotos' class='img-responsive'></a>
                                     
-                                <div class='row'>$nome</div>
+                                <div class='row'>" . $nome . "</div>
                             </div>
                             <div class='col-md-1'>
                             </div>
