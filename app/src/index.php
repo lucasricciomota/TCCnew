@@ -3,8 +3,8 @@
     <meta charset="utf-8">
     <title>São Francisco do Sul</title>
     <link rel="stylesheet" type="text/css" href="../../public/css/bootstrap.min.css">
-    <link rel="stylesheet" type="text/css" href="../../public/css/fonts.css">
     <link rel="stylesheet" type="text/css" href="../../public/css/style.css">
+<<<<<<< HEAD
     <!--    <link rel="stylesheet" type="text/css" href="../../public/css/carousel.css">-->
     <style type="text/css">
         div.row{
@@ -15,21 +15,21 @@
 </head>
     <body>
         <?php
-        session_start();
-        if (isset($_SESSION["idtipousuario"])) {
-            $idtipousuario = $_SESSION["idtipousuario"];
-            if ($idtipousuario == "1") {
-                include("admin/headeradmin.php");
+            session_start();
+            if (isset($_SESSION["idtipousuario"])) {
+                $idtipousuario = $_SESSION["idtipousuario"];
+                if ($idtipousuario == "1") {
+                    include("admin/headeradmin.php");
+                }
+                if ($idtipousuario == "2") {
+                    include("header.php");
+                }
             }
-            if ($idtipousuario == "2") {
+            else {
                 include("header.php");
             }
-        }
-        else {
-            include("header.php");
-        }
+            session_destroy();
         ?>
-
         <div class="row">
             <div id="carousel-example-generic" class="carousel slide" data-ride="carousel">
                 <!-- Indicators -->
@@ -54,9 +54,7 @@
                     </div>
                     <div class="item">
                         <img src="../../imagens/3.jpg" alt="...">
-                        <div class="carousel-caption">
-
-                        </div>
+                        <div class="carousel-caption"></div>
                     </div>
                 </div>
 
@@ -69,6 +67,7 @@
                 </a>
             </div>
         </div>
+
         <div class="row content">
             <div class="col-md-1"></div>
             <div class="col-md-10">
@@ -100,5 +99,3 @@
         <script src="../../public/js/scripts.js"></script>
     </body>
 </html>
-
-

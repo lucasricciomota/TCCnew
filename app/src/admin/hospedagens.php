@@ -32,7 +32,7 @@
 				from hospedagem h, tipohospedagem t
 				where h.idTipoHospedagem = t.idTipoHospedagem
 				order by h.nome;";
-		$resultado = mysqli_query($conexao, $sql);
+		$resultado = mysqli_query($connection, $sql);
 		echo "<table>
 				<tr>
 					<td>Identificação</td>

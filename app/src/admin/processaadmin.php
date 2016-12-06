@@ -1,5 +1,5 @@
 <?php
-	require_once("../conexao.php");
+	require_once("../../config/conexao.php");
 	$idusuario = $_GET["idusuario"];
 	$tipousuario = $_GET["tipousuario"];
 	if ($tipousuario == "1") { 
@@ -10,7 +10,7 @@
 	}
 	$sql = "update Usuario set idtipoUsuario = '$novotipo'
 			where idusuario = $idusuario;";
-	$resultado = mysqli_query($conexao, $sql);
+	$resultado = mysqli_query($connection, $sql);
 	if ($resultado == true) {
 		header("location:usuarios.php");
 	}

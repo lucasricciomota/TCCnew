@@ -13,7 +13,7 @@ require_once("../conexao.php");
     $longitude = $_POST ['longitude'];
     
     $sintaxesql = "SELECT * FROM restaurante WHERE nome = '$nome'";
-    $resultado = mysqli_query($conexao,$sintaxesql);
+    $resultado = mysqli_query($connection,$sintaxesql);
     $quantidadedelinhas = mysqli_num_rows($resultado);
     if ($quantidadedelinhas == 1){
         echo ("Este restaurante já existe");
@@ -22,7 +22,7 @@ require_once("../conexao.php");
     else{ 
         $sintaxesql = "INSERT INTO restaurante (nome,endereco,telefone,HoraAtendimento,teleentrega,descricao,email,site,latitude,longitude) VALUES ('$nome','$endereco','$telefone','$hora','$telentrega','$descricao','$email','$site','$latitude','$longitude')";
         echo $sintaxesql;
-        $cadastrar = mysqli_query($conexao, $sintaxesql);
+        $cadastrar = mysqli_query($connection, $sintaxesql);
         header("location:cadastrorest.php");
        }
 ?>

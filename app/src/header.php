@@ -69,9 +69,9 @@
                             ?>
                         </li>
                     </ul>
-                    </div>
                 </div>
-            </nav>
-        </div>
-        <div class="col-md-1"></div>
+            </div>
+        </nav>
     </div>
+    <div class="col-md-1"></div>
+</div>

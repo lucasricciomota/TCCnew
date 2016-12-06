@@ -6,7 +6,6 @@
 	<title>São Francisco do Sul</title>
     <link href="../../../public/css/bootstrap.min.css" rel="stylesheet">
     <link href="../../../public/css/style.css" rel="stylesheet">
-    <link rel="stylesheet" href="../../../public/fonts/">
 </head>
     <body>         
         <?php include("../header.php");?>

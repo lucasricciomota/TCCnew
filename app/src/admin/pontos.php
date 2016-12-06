@@ -32,7 +32,7 @@
 				from ponto p, tipoponto t
 				where p.idTipoPonto = t.idTipoPonto
 				order by p.nome;";
-		$resultado = mysqli_query($conexao, $sql);
+		$resultado = mysqli_query($connection, $sql);
 		echo "<table>
 				<tr>
 					<td>Identificação</td>

@@ -8,7 +8,7 @@ $senha = $_POST ['senha'];
 $senha2 = $_POST ['senha2'];
 if ($senha == $senha2) {
     $sintaxesql = "SELECT * FROM usuario WHERE nome = '$nome'";
-    $resultado = mysqli_query($conexao,$sintaxesql);
+    $resultado = mysqli_query($connection,$sintaxesql);
     $quantidadedelinhas = mysqli_num_rows($resultado);
     if ($quantidadedelinhas == 1){
         echo ("Este usuário já existe");
@@ -17,7 +17,7 @@ if ($senha == $senha2) {
         $senha = md5($senha);
         $sintaxesql = "INSERT INTO usuario (nome,telefone,email,senha,IdtipoUsuario) VALUES ('$nome','$telefone','$email','$senha','2','1')";
         echo $sintaxesql;
-        $cadastrar = mysqli_query($conexao, $sintaxesql);
+        $cadastrar = mysqli_query($connection, $sintaxesql);
         session_start();
         $_SESSION['nome'] = $nome;
         header("location:../index.php");

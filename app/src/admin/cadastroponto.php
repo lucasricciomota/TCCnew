@@ -96,7 +96,7 @@
                             <?php
                                 require_once("../conexao.php");
                                 $sql = "select * from tipoponto order by descricao;";
-                                $resultado = mysqli_query($conexao, $sql);
+                                $resultado = mysqli_query($connection, $sql);
                                 while ($linha = mysqli_fetch_array($resultado)) {
                                     $id = $linha["idTipoPonto"];
                                     $descricao = $linha["descricao"];
