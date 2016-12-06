@@ -8,12 +8,12 @@
     width:100%;
 }
   .carousel-inner > .item > img,
-  .carousel-inner > .item > a > 
-  img {
+  .carousel-inner > .item > a > img {
       width: 100%;
       height: 410px;
       margin: auto;
   }
+
 .sfs {
 	text-align:center;
 }	
@@ -44,8 +44,8 @@ body {
   background: #fff;
   min-height: 600px;
 }
-body * {
-  font-family: Arial, Geneva, SunSans-Regular, sans-serif;
+body *{
+  font-family: 'Open Sans';
   color: #666;
   line-height: 22px;
 }

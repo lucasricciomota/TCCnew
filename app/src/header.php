@@ -6,7 +6,7 @@
             <div class="dropdown">
                 <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
                     <ul class="nav navbar-nav">
-                        <li><a href="index.php">Home</a></li>
+                        <li><a href="/TCCnew/app/src/">Home</a></li>
                         <li class="dropdown">
                             <a href="#" type="button" class="dropdown-toggle" data-toggle="dropdown" role="onmouseover" aria-haspopup="true" aria-expanded="false">
                                     Pontos Turísticos
