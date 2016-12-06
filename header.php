@@ -45,11 +45,11 @@
                                 <span class="caret"></span>
                             </a>
                                 <ul class="dropdown-menu">
-                                    <li><a href="/TCCnew/hoteis/pousadas.php">Pousadas</a></li>
+                                    <li><a href="/TCCnew/Hospedagens/pousadas.php">Pousadas</a></li>
                                         <li role="separator" class="divider"></li>
-                                    <li><a href="/TCCnew/pontos/hoteis.php">Hotéis</a></li>
+                                    <li><a href="/TCCnew/Hospedagens/hoteis.php">Hotéis</a></li>
                                         <li role="separator" class="divider"></li>
-                                    <li><a href="/TCCnew/pontos/camping.php">Camping</a></li>
+                                    <li><a href="/TCCnew/Hospedagens/camping.php">Camping</a></li>
                                         <li role="separator" class="divider"></li>
                                 </ul>
                             </li>                          
@@ -57,7 +57,7 @@
                                 <a href="/TCCnew/quem somos/quem somos.php">Quem somos?</a>
                             </li>
                             <li>
-                                <a type="button" class=" glyphicon glyphicon-asterisk" data-toggle="modal" data-target="#myModal"></a>
+                                <a type="button" data-toggle="modal" data-target="#myModal">Alterar Informações</a>
 
                                   <!-- Modal -->
                                   <div class="modal fade" id="myModal" role="dialog">
