@@ -60,6 +60,7 @@
         .rowmuseus{
             margin-right: 15px;
             margin-left: 15px;
+            margin-bottom: 15px;
         }
         #map{
             width: 100%;
@@ -134,7 +135,7 @@
                     </div> 
                        
                 </div>
-                <div class="row">
+                <div class="rowmuseus">
                     <div id="map"></div>
                     <script async defer
                       src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDS6Y37V8-TuqQ70bfgNQ6q-aAgmikJ9NM&callback=initMap">
