@@ -63,7 +63,7 @@
         }
         #map{
             width: 100%;
-            height: 360px;
+            height: 300px;
         }
 
     </style>
@@ -82,13 +82,13 @@
                 center: {lat: -34.397, lng: 150.644},
                 zoom: 8
               });
-            }
-            $('#tallModal').on('shown.bs.modal', function () {
+              $('#tallModal').on('shown.bs.modal', function () {
                 google.maps.event.trigger(map, "resize");
-                map.refresh();
                 map.setCenter(centro);
-                map.setZoom(14);                
+                map.setZoom(14);
             });
+            }
+
             function mostrarModal(id){
                 var museu = museus.find(function (v, i) {return v['idponto'] == id});
 
@@ -98,6 +98,7 @@
                 modal.find('#modalImgPrincipal').attr('src', museu.fotos);
 
                 centro = {lat: parseFloat(museu.latitude), lng: parseFloat(museu.longitude)};
+                console.log(museu, centro);    
 
                 modal.modal('show');
             }
@@ -128,7 +129,7 @@
                             <div class='col-md-12' id='idavaliaçãomodal'>Avaliação</div>
                         </div>
                         <div class='row'>
-                            <div class='col-md-12' id='idinformodal'>Informações</div>
+                            <div class='col-md-12' id='idinfomodal'>Informações</div>
                         </div>
                     </div> 
                        
@@ -180,8 +181,7 @@
                             <div class='col-md-1'>
                             </div>
                             <div class='col-md-10'>
-                                <div class='row'><a onclick='mostrarModal(" . $id . ")'><img src='$fotos' class='img-responsive'></a>
-                                    
+                                <div class='row'><a onclick='mostrarModal(" . $id . ")'><img src='$fotos' class='img-responsive'></a></div>
                                 <div class='row'>" . $nome . "</div>
                             </div>
                             <div class='col-md-1'>
