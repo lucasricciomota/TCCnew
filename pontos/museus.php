@@ -40,6 +40,9 @@
         .modal-body{
             padding:5px;
         }
+        .modal-body .main-image img{
+            width: 100%;
+        }
         .container-fluid .jumbotron {
             padding-right: 10px;
             padding-left: 10px;
@@ -57,6 +60,11 @@
         .rowmuseus{
             margin-right: 15px;
             margin-left: 15px;
+            margin-bottom: 15px;
+        }
+        #map{
+            width: 100%;
+            height: 300px;
         }
 
     </style>
@@ -68,8 +76,32 @@
             function mudar(id_el, url_img){
                 $(id_el).attr('src', url_img);
             }
+            var map;
+            var centro = {lat: 0, lng: 0};
+            function initMap() {
+              map = new google.maps.Map(document.getElementById('map'), {
+                center: {lat: -34.397, lng: 150.644},
+                zoom: 8
+              });
+              $('#tallModal').on('shown.bs.modal', function () {
+                google.maps.event.trigger(map, "resize");
+                map.setCenter(centro);
+                map.setZoom(14);
+            });
+            }
+
             function mostrarModal(id){
-                var museu = $linhas.filter(function (v, i){ return v.idponto == id })
+                var museu = museus.find(function (v, i) {return v['idponto'] == id});
+
+                var modal = $('#tallModal');
+
+                modal.find('#idnomemodal').html(museu.nome);
+                modal.find('#modalImgPrincipal').attr('src', museu.fotos);
+
+                centro = {lat: parseFloat(museu.latitude), lng: parseFloat(museu.longitude)};
+                console.log(museu, centro);    
+
+                modal.modal('show');
             }
         </script>
         <div class="container-fluid">
@@ -81,12 +113,10 @@
               </div>
               <div class='modal-body'>
                 <div class='rowmuseus'>
-                    <script>
-                    </script>
-                   
+
                     <div class='col-md-6 jumbotron'>Imagem e Galeria
                         <div class='main-image'>
-                            <img src='$fotos' alt='Placeholder' class='custom' id='imgPrincipal$contadorimg'>
+                            <img alt='Placeholder' class='custom' id='modalImgPrincipal'>
                         </div>
                         <ul class='thumbnails'>
                         </ul>
@@ -94,28 +124,19 @@
                     </div>
                     <div class='col-md-6 jumbotron'>
                         <div class='row''>
-                            <div class='col-md-12'>$nome</div>
+                            <div class='col-md-12' id="idnomemodal">$nome</div>
                         </div>
                         <div class='row'>
-                            <div class='col-md-12' id='idavaliação'>Avaliação</div>
+                            <div class='col-md-12' id='idavaliaçãomodal'>Avaliação</div>
                         </div>
                         <div class='row'>
-                            <div class='col-md-12' id='idinfor'>Informações</div>
+                            <div class='col-md-12' id='idinfomodal'>Informações</div>
                         </div>
                     </div> 
                        
                 </div>
-                <div class="row">
+                <div class="rowmuseus">
                     <div id="map"></div>
-                    <script type="text/javascript">
-                        var map;
-                        function initMap() {
-                          map = new google.maps.Map(document.getElementById('map'), {
-                            center: {lat: -34.397, lng: 150.644},
-                            zoom: 8
-                          });
-                        }
-                    </script>
                     <script async defer
                       src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDS6Y37V8-TuqQ70bfgNQ6q-aAgmikJ9NM&callback=initMap">
                     </script>
@@ -133,7 +154,7 @@
                     </div>
         <?php
             require_once("../conexao.php");
-            $sql = "select p.idponto, p.nome, m.fotos as fotos
+            $sql = "select p.idponto, p.nome, m.fotos as fotos, p.latitude, p.longitude
                     from ponto p left join midia m on p.idponto = m.idponto
                     where idTipoPonto = 3
                     and m.principal
@@ -142,6 +163,9 @@
             $contador = 0;
             $contadorimg = 0;
             $linhas = mysqli_fetch_all($resultado, MYSQL_ASSOC);
+
+            echo '<script>var museus = JSON.parse(\''.json_encode($linhas).'\');</script>';
+
             foreach ($linhas as $linha) {
                 $contador = $contador + 1;
                 $contadorimg = $contadorimg + 1;
@@ -158,8 +182,7 @@
                             <div class='col-md-1'>
                             </div>
                             <div class='col-md-10'>
-                                <div class='row'><a onclick='mostrarModal(" . $id . ")'><img src='$fotos' class='img-responsive'></a>
-                                    
+                                <div class='row'><a onclick='mostrarModal(" . $id . ")'><img src='$fotos' class='img-responsive'></a></div>
                                 <div class='row'>" . $nome . "</div>
                             </div>
                             <div class='col-md-1'>
