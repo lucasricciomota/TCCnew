@@ -10,20 +10,14 @@
   </head>
 <body>
   <div class="container-fluid">
-    <?php 
-      session_start();
-      if (isset($_SESSION["idtipousuario"])) {
-        $idtipousuario = $_SESSION["idtipousuario"];
-        if ($idtipousuario == "1") {
-          include("headeradmin.php");
+    <?php
+        session_start();
+        if (!isset($_SESSION['idtipousuario']) || $_SESSION['idtipousuario'] != 1) {
+            header("location:../index.php");
+            exit;
         }
-        if ($idtipousuario == "2") {
-          include("../header.php");
-        }
-      }
-      else {
+
         include("../header.php");
-      }
     ?>
 	<?php
 		require_once("../../config/conexao.php");

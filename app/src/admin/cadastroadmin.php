@@ -9,7 +9,15 @@
 </head>
 <body>  
 
-    <?php session_start(); include("../header.php");?>
+    <?php
+    session_start();
+    if (!isset($_SESSION['idtipousuario']) || $_SESSION['idtipousuario'] != 1) {
+        header("location:../index.php");
+        exit;
+    }
+
+    include("../header.php");
+    ?>
 
     <div class="page-content">
         <div class="row">

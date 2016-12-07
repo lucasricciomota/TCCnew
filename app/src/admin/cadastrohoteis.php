@@ -12,7 +12,15 @@
     <script src="../../../public/js/scripts.js"></script>
 </head>
 <body>  
-    <?php session_start(); include("../header.php");?>
+    <?php
+    session_start();
+    if (!isset($_SESSION['idtipousuario']) || $_SESSION['idtipousuario'] != 1) {
+        header("location:../index.php");
+        exit;
+    }
+
+    include("../header.php");
+    ?>
     <div class="row cad">
         <div class="col-md-4"></div>
         <div class="col-md-4">

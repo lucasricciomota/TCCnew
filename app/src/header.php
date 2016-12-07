@@ -8,53 +8,20 @@
                     <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
                         <ul class="nav navbar-nav">
                             <li>
-                                <a href="/TCCnew/app/src/index.php/#">Home</a>
+                                <a href="/TCCnew/app/src/index.php/#sobre">Home</a>
                             </li>
                             <li>
-                                <a href="/TCCnew/app/src/index.php/#">História</a>
+                                <a href="/TCCnew/app/src/index.php/#historia">História</a>
                             </li>
                             <li>
-                                <a href="/TCCnew/app/src/index.php/#">Lugares</a>
+                                <a href="/TCCnew/app/src/index.php/#lugares">Lugares</a>
                             </li>
                             <li>
-                                <a href="/TCCnew/app/src/index.php/#">Quem somos</a>
+                                <a href="/TCCnew/app/src/index.php/#quem-somos">Quem somos</a>
                             </li>
                             <li>
-                                <a href="/TCCnew/app/src/index.php/#">Faça parte</a>
+                                <a href="/TCCnew/app/src/index.php/#faca-parte">Faça parte</a>
                             </li>
-<!--                            <li class="dropdown">-->
-<!--                                <a href="pontos.php" type="button" class="dropdown-toggle" data-toggle="dropdown" role="onmouseover" aria-haspopup="true" aria-expanded="false">-->
-<!--                                    Pontos Turísticos-->
-<!--                                    <span class="caret"></span>-->
-<!--                                </a>-->
-<!--                                <ul class="dropdown-menu">-->
-<!--                                    <li><a href="/TCCnew/app/src/pontos/trilhas.php">Trilhas</a></li>-->
-<!--                                    <li role="separator" class="divider"></li>-->
-<!--                                    <li><a href="/TCCnew/app/src/pontos/ilhas.php">Ilhas</a></li>-->
-<!--                                    <li role="separator" class="divider"></li>-->
-<!--                                    <li><a href="/TCCnew/app/src/pontos/praias.php">Praias</a></li>-->
-<!--                                    <li role="separator" class="divider"></li>-->
-<!--                                    <li><a href="/TCCnew/app/src/pontos/lazer.php">Lazer</a></li>-->
-<!--                                    <li role="separator" class="divider"></li>-->
-<!--                                    <li><a href="/TCCnew/app/src/pontos/radical.php">Radical</a></li>-->
-<!--                                    <li role="separator" class="divider"></li>-->
-<!--                                    <li><a href="/TCCnew/app/src/pontos/museus.php">Museus</a></li>-->
-<!---->
-<!--                                </ul>-->
-<!--                            </li>-->
-<!--                            <li class="dropdown">-->
-<!--                                <a href="pontos.php" type="button" class="dropdown-toggle" data-toggle="dropdown" role="onmouseover" aria-haspopup="true" aria-expanded="false">-->
-<!--                                    Hospedagens-->
-<!--                                    <span class="caret"></span>-->
-<!--                                </a>-->
-<!--                                <ul class="dropdown-menu">-->
-<!--                                    <li><a href="/TCCnew/app/src/hospedagens/pousadas.php">Pousadas</a></li>-->
-<!--                                    <li role="separator" class="divider"></li>-->
-<!--                                    <li><a href="/TCCnew/app/src/hospedagens/hoteis.php">Hotéis</a></li>-->
-<!--                                    <li role="separator" class="divider"></li>-->
-<!--                                    <li><a href="/TCCnew/app/src/hospedagens/campings.php">Camping</a></li>-->
-<!--                                </ul>-->
-<!--                            </li>-->
                         </ul>
                         <div class="content-user text-right">
                             <?php
@@ -69,7 +36,7 @@
                                         <div class=\"dropdown\">
                                             <div class=\"collapse navbar-collapse\" id=\"bs-example-navbar-collapse-1\">
                                                 <ul class=\"nav navbar-nav\">";
-                                echo "<a href='logout.php'>Sair</a>";
+                                echo "<a href='/TCCnew/app/src/logout.php'>Sair</a>";
                                 echo "<li class='dropown'>";
                                 echo "<a href='#' class=\"dropdown-toggle\" data-toggle=\"dropdown\" role=\"onmouseover\" aria-haspopup=\"true\" aria-expanded=\"false\"><span class='glyphicon glyphicon-cog'></span></a>";
                                 echo "<ul class='dropdown-menu'>";

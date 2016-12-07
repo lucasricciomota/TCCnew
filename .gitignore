@@ -49,3 +49,6 @@ Temporary Items
 # Project config
 .idea/
 nbproject/
+
+# bower
+bower_components

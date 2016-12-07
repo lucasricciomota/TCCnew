@@ -2,30 +2,23 @@
   <head>
     <meta charset="utf-8">
     <title>São Francisco do Sul</title>
-    <link href="../public/css/bootstrap.min.css" rel="stylesheet">
-    <link href="../public/css/style.css" rel="stylesheet">
-    <script src="../public/js/jquery.min.js"></script>
-    <script src="../public/js/bootstrap.min.js"></script>
-    <script src="../public/js/scripts.js"></script>
+    <link href="/TCCnew/public/css/bootstrap.min.css" rel="stylesheet">
+    <link href="/TCCnew/public/css/style.css" rel="stylesheet">
+    <script src="/TCCnew/public/js/jquery.min.js"></script>
+    <script src="/TCCnew/public/js/bootstrap.min.js"></script>
+    <script src="/TCCnew/public/js/scripts.js"></script>
   </head>
 <body>
   <div class="container-fluid">
-    <?php 
-      session_start();
-      if (isset($_SESSION["idtipousuario"])) {
-        $idtipousuario = $_SESSION["idtipousuario"];
-        if ($idtipousuario == "1") {
-          require_once("headeradmin.php");
+    <?php
+        session_start();
+        if (!isset($_SESSION['idtipousuario']) || $_SESSION['idtipousuario'] != 1) {
+            header("location:../index.php");
+            exit;
         }
-        if ($idtipousuario == "2") {
-          require_once("../header.php");
-        }
-      }
-      else {
-        require_once("../header.php");
-      }
-    ?>
-	<?php
+
+        include("../header.php");
+
 		require_once("../../config/conexao.php");
 		$sql = "select p.nome, p.endereco, p.latitude,
 				p.longitude, p.idponto,	t.descricao

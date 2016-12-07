@@ -23,18 +23,18 @@
                 <!-- Wrapper for slides -->
                 <div class="carousel-inner">
                     <div class="item active">
-                        <img src="/TCCnew/images/1.jpg" alt="...">
+                        <img src="/TCCnew/public/images/1.jpg" alt="...">
                         <div class="carousel-caption">
                         </div>
                     </div>
                     <div class="item">
-                        <img src="/TCCnew/images/2.jpg" alt="...">
+                        <img src="/TCCnew/public/images/2.jpg" alt="...">
                         <div class="carousel-caption">
 
                         </div>
                     </div>
                     <div class="item">
-                        <img src="/TCCnew/images/3.jpg" alt="...">
+                        <img src="/TCCnew/public/images/3.jpg" alt="...">
                         <div class="carousel-caption"></div>
                     </div>
                 </div>
@@ -52,12 +52,15 @@
         <div class="row container-block">
             <div class="col-md-1"></div>
             <div class="col-md-10">
-                <div class="row">
+                <div id="sobre" class="row content">
                     <div class="col-md-12">
                         <h1 class="title text-center">São Francisco do Sul</h1>
                     </div>
                 </div>
-                <div class="row content">
+
+                <hr/>
+
+                <div id="historia" class="row content">
                     <div class="col-md-5">
                         <h3 class="block-title">História?</h3>
                         <h4>São Francisco do Sul é a cidade mais antiga de Santa Catarina e a terceira cidade mais antiga do Brasil.</h4>
@@ -65,19 +68,43 @@
                     </div>
                     <div class="col-md-2"></div>
                     <div class="col-md-5 video">
-                        <iframe width="100%" height="50%" src="https://www.youtube.com/embed/OMJTAZLH9lE" frameborder="0" allowfullscreen></iframe>
+                        <img width="100%" height="50%" src="/TCCnew/public/images/1.jpg" />
                     </div>
                 </div>
 
-                <div class="row content">
+                <hr/>
+
+                <div id="lugares" class="row content">
                     <div class="col-md-12 text-center">
                         <h3 class="block-title">Lugares</h3>
-                        <iframe width="100%" height="50%" src="https://www.youtube.com/embed/OMJTAZLH9lE" frameborder="0" allowfullscreen></iframe>
-                        <h4>Bla</h4>
+                        <div class="row">
+                            <div class="col-md-5">
+                                <h3 class="form-input-title">Pontos</h3>
+                                <div class="row">
+                                    <button class="btn btn-default"><a href="/TCCnew/app/src/pontos/trilhas.php">Trilhas</a></button>
+                                    <button class="btn btn-default"><a href="/TCCnew/app/src/pontos/ilhas.php">Ilhas</a></button>
+                                    <button class="btn btn-default"><a href="/TCCnew/app/src/pontos/praias.php">Praias</a></button>
+                                    <button class="btn btn-default"><a href="/TCCnew/app/src/pontos/lazer.php">Lazer</a></button>
+                                    <button class="btn btn-default"><a href="/TCCnew/app/src/pontos/radical.php">Radical</a></button>
+                                    <button class="btn btn-default"><a href="/TCCnew/app/src/pontos/museus.php">Museus</a></button>
+                                </div>
+                            </div>
+                            <div class="col-md-2"></div>
+                            <div class="col-md-5">
+                                <h3 class="form-input-title">Hospedagens</h3>
+                                <div class="row">
+                                    <button class="btn btn-default"><a href="/TCCnew/app/src/hospedagens/pousadas.php">Pousadas</a></button>
+                                    <button class="btn btn-default"><a href="/TCCnew/app/src/hospedagens/hoteis.php">Hotéis</a></button>
+                                    <button class="btn btn-default"><a href="/TCCnew/app/src/hospedagens/campings.php">Camping</a></button>
+                                </div>
+                            </div>
+                        </div>
                     </div>
                 </div>
 
-                <div class="row content">
+                <hr/>
+
+                <div id="quem-somos" class="row content">
                     <div class="col-md-5 video">
                         <iframe width="100%" height="50%" src="https://www.youtube.com/embed/OMJTAZLH9lE" frameborder="0" allowfullscreen></iframe>
                     </div>
@@ -91,8 +118,22 @@
                         <button class="btn btn-info"><a href="quem%20somos/quem%20somos.php">Descubra mais</a></button>
                     </div>
                 </div>
+
+                <hr/>
+
+                <div id="faca-parte" class="row content">
+                    <div class="col-md-12 text-center">
+                        <h3 class="block-title">Venha fazer parte</h3>
+                        <button class="btn btn-success"><a href="/TCCnew/app/src/cadastro/">Cadastre-se</a></button>
+                    </div>
+                </div>
             </div>
             <div class="col-md-1"></div>
+        </div>
+        <div class="row footer">
+            <div class="col-md-12">
+                <footer></footer>
+            </div>
         </div>
         <script src="/TCCnew/public/js/jquery.min.js"></script>
         <script src="/TCCnew/public/js/bootstrap.min.js"></script>

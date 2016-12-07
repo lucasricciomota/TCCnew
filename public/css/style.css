@@ -189,6 +189,7 @@ h1, h2, h3{
 
 .row.container-block .content{
     margin: 2em 0;
+    padding-top: 98px;
 }
 
 .row.container-block .content div{
