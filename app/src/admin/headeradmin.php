@@ -7,49 +7,6 @@
                         <li>
                             <a href="/TCCnew/index.php">Home</a>
                         </li>
-                        <li>
-                            <a href="/TCCnew/Admin/cadastroadmin.php">Cadastro de Administrador</a>
-                        </li>
-                        <li class="dropdown">
-                            <a href="" type="button" class="dropdown-toggle" data-toggle="dropdown" role="onmouseover" aria-haspopup="true" aria-expanded="false">
-                                    Pontos
-                                <span class="caret"></span>
-                            </a>
-                            <ul class="dropdown-menu">
-                                <li><a href="/TCCnew/Admin/pontos.php">Gerenciar Pontos</a></li>
-                                    <li role="separator" class="divider"></li>
-                                <li><a href="/TCCnew/Admin/cadastroponto.php">Cadastrar Pontos</a></li>
-                                    <li role="separator" class="divider"></li>    
-                            </ul>
-                        </li>
-                        <li class="dropdown">
-                            <a href="" type="button" class="dropdown-toggle" data-toggle="dropdown" role="onmouseover" aria-haspopup="true" aria-expanded="false">
-                                    Restaurantes
-                                <span class="caret"></span>
-                            </a>
-                            <ul class="dropdown-menu">
-                                <li><a href="/TCCnew/Admin/restaurante.php">Gerenciar Restaurantes</a></li>
-                                    <li role="separator" class="divider"></li>
-                                <li><a href="/TCCnew/Admin/cadastrorest.php">Cadastrar Restaurantes</a></li>
-                                    <li role="separator" class="divider"></li>    
-                            </ul>
-                        </li>
-                       <li class="dropdown">
-                            <a href="" type="button" class="dropdown-toggle" data-toggle="dropdown" role="onmouseover" aria-haspopup="true" aria-expanded="false">
-                                    Hospedagens
-                                <span class="caret"></span>
-                            </a>
-                            <ul class="dropdown-menu">
-                                <li><a href="/TCCnew/Admin/hospedagens.php">Gerenciar Hospedagens</a></li>
-                                    <li role="separator" class="divider"></li>
-                                <li><a href="/TCCnew/Admin/cadastrohoteis.php">Cadastrar Hospedagens</a></li>
-                                    <li role="separator" class="divider"></li>    
-                            </ul>
-                        </li>
-                        <li>
-                            <a href="/TCCnew/Admin/usuarios.php">Gerenciar Usuários</a>
-                        </li>
-                   
                     </ul>
                     <ul class="nav navbar-nav navbar-right">
                         <?php

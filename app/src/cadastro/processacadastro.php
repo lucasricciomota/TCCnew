@@ -1,28 +1,29 @@
-<meta charset="utf-8">
 <?php
-require_once("../conexao.php");
-$nome = $_POST ['nome'];
-$telefone = $_POST ['telefone'];
-$email = $_POST ['email'];
-$senha = $_POST ['senha']; 
-$senha2 = $_POST ['senha2'];
-if ($senha == $senha2) {
-    $sintaxesql = "SELECT * FROM usuario WHERE nome = '$nome'";
-    $resultado = mysqli_query($connection,$sintaxesql);
-    $quantidadedelinhas = mysqli_num_rows($resultado);
-    if ($quantidadedelinhas == 1){
-        echo ("Este usuário já existe");
+    require_once("../../config/conexao.php");
+    $nome = $_POST ['nome'];
+    $telefone = $_POST ['telefone'];
+    $email = $_POST ['email'];
+    if ($_POST['senha'] == $_POST['senha2']) {
+
+        $senha = $_POST['senha'];
+
+        $sql = "SELECT * FROM usuario WHERE email= '$email'";
+
+        $resultado = mysqli_query($connection, $sql);
+        $quantidadedelinhas = mysqli_num_rows($resultado);
+
+        if ($quantidadedelinhas == 1){
+            echo ("Este usuário já existe");
+        } else {
+            $senha = md5($senha);
+            $sql = "INSERT INTO usuario (nome, telefone, email, senha, IdtipoUsuario, idcidade) 
+                            VALUES ('$nome', '$telefone', '$email', '$senha', 2, 1)";
+            $cadastrar = mysqli_query($connection, $sql);
+
+            if ($cadastrar){
+                header("location:/TCCnew/app/src/");
+            }
+        }
+    } else {
+        echo "Senhas não correspondem";
     }
-    else{ 
-        $senha = md5($senha);
-        $sintaxesql = "INSERT INTO usuario (nome,telefone,email,senha,IdtipoUsuario) VALUES ('$nome','$telefone','$email','$senha','2','1')";
-        echo $sintaxesql;
-        $cadastrar = mysqli_query($connection, $sintaxesql);
-        session_start();
-        $_SESSION['nome'] = $nome;
-        header("location:../index.php");
-                }
-            }    
-
-
-?>

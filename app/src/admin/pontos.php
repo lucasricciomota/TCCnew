@@ -18,15 +18,15 @@
           require_once("headeradmin.php");
         }
         if ($idtipousuario == "2") {
-          require_once("header.php");
+          require_once("../header.php");
         }
       }
       else {
-        require_once("header.php");
+        require_once("../header.php");
       }
     ?>
 	<?php
-		require_once("../conexao.php");
+		require_once("../../config/conexao.php");
 		$sql = "select p.nome, p.endereco, p.latitude,
 				p.longitude, p.idponto,	t.descricao
 				from ponto p, tipoponto t

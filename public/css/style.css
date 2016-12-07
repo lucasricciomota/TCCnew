@@ -66,14 +66,10 @@ html, body{
 }
 
 body{
-  background: #fff;
-  min-height: 600px;
-}
-
-body * {
-  font-family: 'Open Sans';
-  color: #666;
-  line-height: 22px;
+    background: #fff;
+    min-height: 600px;
+    color: black;
+    font-family: 'Open Sans';
 }
 
 .container-fluid {
@@ -98,26 +94,97 @@ body * {
     text-align:center;
 }
 
-.jumbotron{
-    margin:1% 0 1% 0;
+div.row{
+    margin-right: 0;
+    margin-left: 0;
 }
 
-section{
-    padding: 50px !important;
+.header-menu{
+    position: fixed;
+    top: 0;
+    left: 0;
+    background: #1abc9c;
+    height: 98px;
+    z-index: 99;
+    border-bottom: 1px solid white;
+}
+
+.header-menu .content-user{
+    float: right;
+}
+
+.header-menu > div{
+    margin: 23px 0;
+}
+
+.header-menu a{
+    color: white;
+    border: 1px transparent solid;
+}
+
+.navbar-nav > li a{
+    -webkit-transition: border 0.2s 0.15s linear;
+    -moz-transition: border 0.2s 0.15s linear;
+    -ms-transition: border 0.2s 0.15s linear;
+    -o-transition: border 0.2s 0.15s linear;
+    transition: border 0.2s 0.15s linear;
+}
+
+.navbar-nav > li a:hover,
+.navbar-nav > li a:focus{
+    background: initial;
+    border: 1px solid white;
+}
+
+.header-menu .options.user-menu .nav.navbar-nav > li a:hover,
+.header-menu .options.user-menu .nav.navbar-nav > li a:focus{
+    border: initial;
+    background: transparent;
+}
+
+.header-menu .options.user-menu .nav.navbar-nav{
+    float: right;
 }
 
 .navbar{
-    margin-bottom: 5px !important
+    margin-bottom: 0;
+}
+
+.page-content{
+    position: relative;
+    top: 98px;
+    left: 0;
+    margin-bottom: 2em;
 }
 
 .row.container-block{
     margin: 2em 0;
 }
 
-.row.container-block .title{
+h1, h2, h3{
+    line-height: 100%;
+}
+
+.title{
     font-family: Montserrat, serif;
     font-weight: bold;
     font-size: 4em;
+}
+
+.block-title{
+    font-family: Montserrat, serif;
+    font-weight: bold;
+    font-size: 3em;
+}
+
+.form-input-title{
+    font-family: Montserrat, serif;
+    font-weight: normal;
+    font-size: 2rem;
+}
+
+.font-montserrat{
+    font-family: Montserrat, serif;
 }
 
 .row.container-block .content{
@@ -126,4 +193,18 @@ section{
 
 .row.container-block .content div{
     margin: 2rem 0;
+}
+
+.form-data{
+    padding: 20px;
+}
+
+.form-data.login{
+    color: white;
+    background: rgba(0, 0, 0, .7);
+}
+
+
+.form-data .btn-enter{
+    margin: 20px 0;
 }

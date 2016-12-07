@@ -15,18 +15,18 @@
       if (isset($_SESSION["idtipousuario"])) {
         $idtipousuario = $_SESSION["idtipousuario"];
         if ($idtipousuario == "1") {
-          require_once("headeradmin.php");
+          include("headeradmin.php");
         }
         if ($idtipousuario == "2") {
-          require_once("header.php");
+          include("../header.php");
         }
       }
       else {
-        require_once("header.php");
+        include("../header.php");
       }
     ?>
 	<?php
-		require_once("../conexao.php");
+		require_once("../../config/conexao.php");
 		$sql = "select h.nome, h.endereco, h.latitude,
 				h.longitude, h.idHospedagem, t.descricao
 				from hospedagem h, tipohospedagem t

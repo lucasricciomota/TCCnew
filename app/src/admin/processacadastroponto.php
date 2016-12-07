@@ -1,6 +1,6 @@
 <meta charset="utf-8">
 <?php
-    require_once("../conexao.php");
+    require_once("../../config/conexao.php");
     $nomeponto = $_POST ['nome'];
     $descricao = $_POST ['descricao'];
     $endereco = $_POST ['endereco'];

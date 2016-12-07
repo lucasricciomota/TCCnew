@@ -1,5 +1,5 @@
  <?php
-	require_once("conexao.php");
+	require_once("../config/conexao.php");
 	session_start();
 	$idusuario = $_SESSION["idusuario"];
 	$nome = $_POST["nome"];

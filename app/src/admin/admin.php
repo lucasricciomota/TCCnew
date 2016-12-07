@@ -5,7 +5,7 @@
     </head>
     <body>
    <div class="container-fluid">
-    <?php require_once("headeradmin.php");?>    
+    <?php require_once("headeradmin.php");?>
          
 </div>        
     <div class="row sfs jumbotron">

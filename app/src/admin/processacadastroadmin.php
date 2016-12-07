@@ -1,6 +1,6 @@
 <meta charset="utf-8">
 <?php
-    require_once("../conexao.php");
+    require_once("../../config/conexao.php");
     $nome = $_POST ['nome'];
     $telefone = $_POST ['telefone'];
     $email = $_POST ['email'];
@@ -13,7 +13,7 @@
         if ($quantidadedelinhas == 1){
             echo ("Este usuário já existe");
         }
-        else{ 
+        else{
             $senha = md5($senha);
             $sintaxesql = "INSERT INTO Usuario (nome,telefone,email,senha,IdtipoUsuario,idcidade) VALUES ('$nome','$telefone','$email','$senha','1','1')";
             echo $sintaxesql;

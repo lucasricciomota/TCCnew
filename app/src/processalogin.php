@@ -1,11 +1,12 @@
 <?php
-    echo "chegouuuu";
-    require_once("conexao.php");
+
+    require_once(explode('src', getcwd())[0]."config/conexao.php");
+
     if (isset($_POST["email"])) {
         $email = $_POST["email"];
-        $senha = $_POST["senha"];
-        $sintaxesql = "select * from usuario where email = '$email' and senha = md5('$senha')";
-        $resultado = mysqli_query($connection, $sintaxesql);
+        $senha = md5($_POST["senha"]);
+        $sql = "select * from usuario where email='$email' AND senha='$senha'";
+        $resultado = mysqli_query($connection, $sql);
         if ($resultado) {
             if (mysqli_num_rows($resultado) > 0) {
                 while ($linha = mysqli_fetch_array($resultado)) {
@@ -15,13 +16,11 @@
                     $_SESSION ["idtipousuario"] = $linha["idtipoUsuario"];
                     header('location:index.php');
                 }
-            }
-            else {
-                echo "Usuário ou Senha Incorretos!";
+            } else {
+                echo "Usuário não encontrado";
             }
         }
         else {
-            echo "Erro: " . mysqli_error($connection);
+            header("location:../error.php");
         }
     }
-?>
