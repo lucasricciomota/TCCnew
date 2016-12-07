@@ -36,7 +36,7 @@
                 <div class="col-md-7"></div>
                 <div class="col-md-4">
                     <div class="row">
-                        <form action="processacadastro.php" class="form-data" method="post">
+                        <form action="processacadastro.php" class="form-data login" method="post">
                             <div class="row">
                                 <h3 class="form-input-title">Nome:</h3>
                                 <div class="input-group">
