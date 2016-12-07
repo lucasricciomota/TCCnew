@@ -20,7 +20,6 @@
                     <div class="col-md-1"></div>
                     <div class="col-md-5">
                         <h1 class="title">Faça seu cadastro</h1>
-                        <h3 class="font-montserrat">subdescription</h3>
                     </div>
                     <div class="col-md-1"></div>
                     <div class="col-md-4 text-right">
