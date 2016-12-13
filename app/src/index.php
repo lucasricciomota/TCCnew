@@ -11,7 +11,7 @@
             session_start();
             include ("header.php");
         ?>
-        <div class="row">
+        <div class="row" style="position: relative; top: 98px; left: 0;">
             <div id="carousel-example-generic" class="carousel slide" data-ride="carousel">
                 <!-- Indicators -->
                 <ol class="carousel-indicators">
@@ -123,8 +123,8 @@
 
                 <div id="faca-parte" class="row content">
                     <div class="col-md-12 text-center">
-                        <h3 class="block-title">Venha fazer parte</h3>
-                        <button class="btn btn-success"><a href="/TCCnew/app/src/cadastro/">Cadastre-se</a></button>
+                        <h3 class="block-title">Cadastre-se</h3>
+                        <button class="btn btn-success"><a href="/TCCnew/app/src/cadastro/">Clique aqui</a></button>
                     </div>
                 </div>
             </div>

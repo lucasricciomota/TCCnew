@@ -18,15 +18,8 @@
             <div class="row">
                 <div class="row jumbotron">
                     <div class="col-md-1"></div>
-                    <div class="col-md-5">
+                    <div class="col-md-10">
                         <h1 class="title">Faça seu cadastro</h1>
-                    </div>
-                    <div class="col-md-1"></div>
-                    <div class="col-md-4 text-right">
-                        <h3 class="font-montserrat">
-                            Veja as vantages de efetuar seu cadastro
-                        </h3>
-                        <a href="../visitante.php"><p class="font-montserrat">Confira agora!</p></a>
                     </div>
                     <div class="col-md-1"></div>
                 </div>

@@ -24,8 +24,7 @@
             <div class="row jumbotron">
                 <div class="col-md-1"></div>
                 <div class="col-md-10">
-                    <h1 class="title">Cadastre um usuário</h1>
-                    <h3 class="font-montserrat">como administrador do site</h3>
+                    <h2 class="title">Cadastre um Administrador</h2>
                 </div>
                 <div class="col-md-1"></div>
             </div>
