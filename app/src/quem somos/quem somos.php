@@ -20,10 +20,7 @@
         <div class="row assunto">
             <div class="col-md-1"></div>
             <div class="col-md-10">
-                <h3>Somos estudantes do curso Técnico em Informática integrado com o Ensino Médio, 
-                que criamos esse site com o intuito de ajudar turistas que querem saber mais sobre 
-                a cidade de São Francisco do Sul,pois
-                sabemos a dificuldade de aproveitar o que cidade dispõe sem ter as principais informações.
+                <h3>Somos estudantes formados no curso técnico de Informática integrado com o Ensino Médio do Instituto Federal de Ciência e Tecnologia do campus de Araquari, e como moradores de São Francisco do Sul conhecemos a falta de acesso e de informação sobre a cidade que é tão bela, mas não aproveitada ao máximo. Além disso, vemos também a quantidade de turistas que frequantam as praias e os pontos históricos de São Francisco anualmente e não conseguem se encontrar com facilidade, deixando passar boas experiências e ótimos lugares para se conhecer. Assim desenvolvemos este site com o objetivo de integrar tanto os turistas como o moradores para que conheçam mais da cidade e desfrutem ao máximo dos recursos que ela tem para oferecer.
                 </h3>
             </div>
             <div class="col-md-1"></div>

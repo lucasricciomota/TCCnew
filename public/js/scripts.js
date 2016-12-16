@@ -42,7 +42,7 @@ function mostrarModal(id){
     modal.find('#idnomemodal').html(museu.nome);
     modal.find('#idinfomodal').html(museu.descricao);
     modal.find('#modalImgPrincipal').attr('src', museu.fotos);
-
+    modal.find('input[name=idponto]').val(museu.idponto);
     centro = {lat: parseFloat(museu.latitude), lng: parseFloat(museu.longitude)};
 
     modal.modal('show');

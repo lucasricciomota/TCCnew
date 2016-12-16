@@ -23,7 +23,7 @@
                         group by h.idHospedagem, h.nome;";
             $resultado = mysqli_query($connection, $sql);
             $contador = 0;
-            while ($linha = mysqli_fetch_array($resultado)) {
+            while ($linha = mysqli_fetch_array( $resultado )) {
                 $contador = $contador + 1;
                 $id = $linha["idHospedagem"];
                 $nome = $linha["nome"];

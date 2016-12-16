@@ -1,29 +1,37 @@
 <?php $current_directory = getcwd(); ?>
-<div class="row">
-    <div class="col-md-12 header-menu">
-        <div class="col-md-1"></div>
-        <div class="col-md-10">
-            <nav role="navigation">
-                <div class="dropdown">
-                    <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+<div class="navbar-wrapper">
+<div class="container">
+    <nav class="navbar navbar-inverse navbar-static-top">
+    <div class="container">
+        <div id="navbar" class="navbar-collapse collapse">
+
                         <ul class="nav navbar-nav">
-                            <li>
-                                <a href="/TCCnew/app/src/index.php/#sobre">Home</a>
+                            <li class="active"><a href="/TCCnew/app/src/indexteste.php">Home</a></li>
+                            <li><a href="/TCCnew/app/src/indexteste.php#historia">História</a></li>
+                            <li class="dropdown">
+                              <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Pontos Turísticos <span class="caret"></span></a>
+                              <ul class="dropdown-menu">
+                                <li><a href="/TCCnew/app/src/pontos/praias.php">Praias</a></li>
+                                <li><a href="/TCCnew/app/src/pontos/museus.php">Museus</a></li>
+                                <li><a href="/TCCnew/app/src/pontos/trilhas.php">Trilhas</a></li>
+                                <li><a href="/TCCnew/app/src/pontos/radical.php">Radical</a></li>
+                                <li><a href="/TCCnew/app/src/pontos/lazer.php">Lazer</a></li>
+                                <li><a href="/TCCnew/app/src/pontos/ilhas.php">Ilhas</a></li>
+                              </ul>
                             </li>
-                            <li>
-                                <a href="/TCCnew/app/src/index.php/#historia">História</a>
+                            <li class="dropdown">
+                              <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Hospedagens <span class="caret"></span></a>
+                              <ul class="dropdown-menu">
+                                <li><a href="/TCCnew/app/src/Hospedagens/pousadas.php">Pousadas</a></li>
+                                <li><a href="/TCCnew/app/src/Hospedagens/hoteis.php">Hotéis</a></li>
+                                <li><a href="/TCCnew/app/src/Hospedagens/campings.php">Campings</a></li>
+                              </ul>
                             </li>
-                            <li>
-                                <a href="/TCCnew/app/src/index.php/#lugares">Lugares</a>
-                            </li>
-                            <li>
-                                <a href="/TCCnew/app/src/index.php/#quem-somos">Quem somos</a>
-                            </li>
-                            <li>
-                                <a href="/TCCnew/app/src/index.php/#faca-parte">Faça parte</a>
-                            </li>
+                            <li><a href="/TCCnew/app/src/indexteste.php#quemsomos">Quem Somos?</a></li>                
+                            <li><a href="/TCCnew/app/src/cadastro/index.php">Cadastre-se</a></li>
                         </ul>
-                        <div class="content-user text-right">
+
+                        <ul class="content-user text-right">
                             <?php
                             if (isset($_SESSION["nomeusuario"])) {
                                 echo "<div class='authenticated'>";
@@ -72,7 +80,7 @@
                                   </div>";
                             }
                             ?>
-                        </div>
+                        </ul>
                     </div>
                 </div>
             </nav>
@@ -80,3 +88,39 @@
         <div class="col-md-1"></div>
     </div>
 </div>
+</div>
+</div>
+
+
+<!-- <div class="navbar-wrapper">
+      <div class="container">
+
+        <nav class="navbar navbar-inverse navbar-static-top">
+          <div class="container">
+
+            <div id="navbar" class="navbar-collapse collapse">
+                <ul class="nav navbar-nav">
+                    <li><a href="#myCarousel">Home</a></li>
+                    <li><a href="#quemsomos">Quem Somos?</a></li>
+                    <li><a href="#historia">História</a></li>
+                    <li class="dropdown">
+                      <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Dropdown <span class="caret"></span></a>
+                      <ul class="dropdown-menu">
+                        <li><a href="#">Action</a></li>
+                        <li><a href="#">Another action</a></li>
+                        <li><a href="#">Something else here</a></li>
+                        <li role="separator" class="divider"></li>
+                        <li class="dropdown-header">Nav header</li>
+                        <li><a href="#">Separated link</a></li>
+                        <li><a href="#">One more separated link</a></li>
+                      </ul>
+                    </li>
+                </ul>
+
+
+            </div>
+          </div>
+        </nav>
+
+      </div>
+    </div> -->
