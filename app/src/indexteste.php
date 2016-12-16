@@ -91,10 +91,12 @@
       </ol>
       <div class="carousel-inner" role="listbox">
         <div class="item active">
-          <img class="first-slide" src="data:image/gif;base64,R0lGODlhAQABAIAAAHd3dwAAACH5BAAAAAAALAAAAAABAAEAAAICRAEAOw==" alt="First slide">
+        
+          <img class="first-slide"  src="/TCCnew/public/images/centro.jpg" alt="First slide">
+          
           <div class="container">
             <div class="carousel-caption">
-              <h1>Conheça São Francisco do Sul</h1>
+              <h1 style="font-size:60px;">Conheça São Francisco do Sul</h1> <br><br><br>
               <p><a class="btn btn-lg btn-primary" href="cadastro/index.php" role="button">Cadastre-se</a></p>
             </div>
           </div>
@@ -103,9 +105,9 @@
           <img class="second-slide" src="data:image/gif;base64,R0lGODlhAQABAIAAAHd3dwAAACH5BAAAAAAALAAAAAABAAEAAAICRAEAOw==" alt="Second slide">
           <div class="container">
             <div class="carousel-caption">
-              <h1>Another example headline.</h1>
-              <p>Cras justo odio, dapibus ac facilisis in, egestas eget quam. Donec id elit non mi porta gravida at eget metus. Nullam id dolor id nibh ultricies vehicula ut id elit.</p>
-              <p><a class="btn btn-lg btn-primary" href="#" role="button">Learn more</a></p>
+              <h1 style="font-size:60px;">Veja os melhores pontos.</h1><br><br><br>
+              <p></p>
+              <p><a class="btn btn-lg btn-primary" href="pontos/melhorespontos.php" role="button">Ranking</a></p>
             </div>
           </div>
         </div>
@@ -113,7 +115,7 @@
           <img class="third-slide" src="data:image/gif;base64,R0lGODlhAQABAIAAAHd3dwAAACH5BAAAAAAALAAAAAABAAEAAAICRAEAOw==" alt="Third slide">
           <div class="container">
             <div class="carousel-caption">
-              <h1>One more for good measure.</h1>
+              <h1>One more for good measure.</h1><br><br><br>
               <p>Cras justo odio, dapibus ac facilisis in, egestas eget quam. Donec id elit non mi porta gravida at eget metus. Nullam id dolor id nibh ultricies vehicula ut id elit.</p>
               <p><a class="btn btn-lg btn-primary" href="#" role="button">Browse gallery</a></p>
             </div>
@@ -166,12 +168,12 @@
 
       <div class="row featurette" id="historia">
         <div class="col-md-7">
-          <h2 class="featurette-heading">Hisória <span class="text-muted">da cidade.</span></h2>
-          <p class="lead">São Francisco do Sul é a cidade mais antiga de Santa Catarina e a terceira cidade mais antiga do Brasil. Colonizada pelos Portugueses, espanhóis e açorianos, sua primeira ocupação, foi feita temporariamente por espanhóis por volta de 1553.</p>
-          <a class="btn btn-default" href="historia/historia.php" role="button">Leia mais &raquo;</a>
+          <h2 class="featurette-heading" style="text-align:right;">Hisória <span class="text-muted">da cidade.</span></h2>
+          <p class="lead" style="text-align:right;">São Francisco do Sul é a cidade mais antiga de Santa Catarina e a terceira cidade mais antiga do Brasil. Colonizada pelos Portugueses, espanhóis e açorianos, sua primeira ocupação, foi feita temporariamente por espanhóis por volta de 1553.</p>
+          <a class="btn btn-default" href="historia/historia.php" role="button" >Leia mais &raquo;</a>
         </div>
         <div class="col-md-5">
-          <img class="featurette-image img-responsive center-block" data-src="holder.js/500x500/auto" alt="Generic placeholder image">
+          <img class="featurette-image img-responsive center-block" src="../../public/images/1.jpg" width="500px" height="500px" alt="Generic placeholder image">
         </div>
       </div>
 
@@ -196,7 +198,7 @@
 
       <div class="row">
         <div class="col-md-12">
-          <iframe width="100%" height="100%" src="https://www.youtube.com/embed/OMJTAZLH9lE" frameborder="0" allowfullscreen></iframe>
+          <iframe width="100%" height="720px" src="https://www.youtube.com/embed/OMJTAZLH9lE" frameborder="0" allowfullscreen></iframe>
         </div>
       </div>
       <hr class="featurette-divider">

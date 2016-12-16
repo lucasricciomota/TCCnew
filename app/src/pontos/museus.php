@@ -60,6 +60,9 @@
                 width: 100%;
                 height: 300px;
             }
+            .rowtitulo{
+                margin-top:100px;
+            }
 
         </style>
     </head>
@@ -101,7 +104,7 @@
                                         <option value="1">1</option>
                                         <option value="2">2</option>
                                         <option value="3">3</option>
-                                        <option value="4">4</option>
+                                        <option value="4">4</option>    
                                         <option value="5">5</option>
                                     </select>
                                 </form>
@@ -132,7 +135,7 @@
           </div><!-- /.modal-dialog -->
         </div><!-- /.modal -->
     </div>
-                    <div class="row">
+                    <div class="rowtitulo">
                         <div class="col-lg-12 text-center">
                             <h2>Museus</h2>
                             </br>   

@@ -52,7 +52,13 @@
         <div class="row container-block">
             <div class="col-md-1"></div>
             <div class="col-md-10">
+                <div id="sobre" class="row content">
+                    <div class="col-md-12">
+                        <h1 class="title text-center">São Francisco do Sul</h1>
+                    </div>
+                </div>
 
+                <hr/>
 
                 <div id="historia" class="row content">
                     <div class="col-md-5">
