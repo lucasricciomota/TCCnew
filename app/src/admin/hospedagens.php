@@ -2,11 +2,8 @@
   <head>
     <meta charset="utf-8">
     <title>São Francisco do Sul</title>
-    <link href="../public/css/bootstrap.min.css" rel="stylesheet">
-    <link href="../public/css/style.css" rel="stylesheet">
-    <script src="../public/js/jquery.min.js"></script>
-    <script src="../public/js/bootstrap.min.js"></script>
-    <script src="../public/js/scripts.js"></script>
+    <link href="/TCCnew/public/css/bootstrap.min.css" rel="stylesheet">
+    <link href="/TCCnew/public/css/style.css" rel="stylesheet">
   </head>
 <body>
   <div class="container-fluid">

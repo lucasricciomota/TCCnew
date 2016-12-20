@@ -10,17 +10,33 @@
     <script src="../../../public/js/ie-emulation-modes-warning.js"></script>
     <link href="../carousel.css" rel="stylesheet">
 
+    <style type="text/css">
+        .main-title {
+            clear: both;
+            width: 100%;
+            padding: 0.8em 2.5%;
+            margin-top: 140px;
+            text-align: left;
+            font-size: 1.2em;
+            letter-spacing: 0.5em;
+            color: #FFF;
+            background-color: #282828;
+            overflow: hidden;
+        }
+    </style>
 </head>
 <body>
     <?php session_start(); include("../header.php");?>
     <div class="container-fluid">
-        <div class="row">
             <div class="col-md-1"></div>
             <div class="col-md-10">
-                <h1 class="featurette-heading texto">Quem Somos? </h1>
+                <div class="main-title">
+                    <h1 class="texto">Quem Somos? </h1>
+                </div>
             </div>
             <div class="col-md-1"></div>
         </div>
+
         <div class="row assunto">
             <div class="col-md-1"></div>
             <div class="col-md-10 texto">

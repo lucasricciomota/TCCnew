@@ -6,6 +6,12 @@
 	<title>São Francisco do Sul</title>
     <link href="../../../public/css/bootstrap.min.css" rel="stylesheet">
     <link href="../../../public/css/style.css" rel="stylesheet">
+    <style type="text/css">
+        .jumbotron {
+            padding-top: 30px !important;
+            padding-bottom: 30px !important;
+        }
+    </style>
 </head>
 <body>  
 
@@ -24,7 +30,7 @@
             <div class="row jumbotron">
                 <div class="col-md-1"></div>
                 <div class="col-md-10">
-                    <h2 class="title">Cadastre um Administrador</h2>
+                    <h1 class="textotitulo1" style="font-size:40px;">Cadastre um Administrador</h1>
                 </div>
                 <div class="col-md-1"></div>
             </div>

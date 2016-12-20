@@ -10,6 +10,12 @@
     <script src="../../../public/js/jquery.min.js"></script>
     <script src="../../../public/js/bootstrap.min.js"></script>
     <script src="../../../public/js/scripts.js"></script>
+    <style type="text/css">
+        .jumbotron {
+            padding-top: 30px !important;
+            padding-bottom: 30px !important;
+        }
+    </style>
 </head>
 <body>  
     <?php
@@ -21,12 +27,15 @@
 
     include("../header.php");
     ?>
-    <div class="row cad">
-        <div class="col-md-4"></div>
-        <div class="col-md-4">
-            <h3>Cadastro de Hotéis</h3>
+<div class="page-content">
+    <div class="row">
+        <div class="row jumbotron">
+            <div class="col-md-1"></div>
+            <div class="col-md-10">
+                <h1 class="textotitulo1" style="font-size:40px;">Cadastre uma Hospedagem</h1>
+            </div>
+            <div class="col-md-1"></div>
         </div>
-        <div class="col-md-4"></div>
     </div>
        
     <form action="processacadastrohoteis.php" method="post">    
@@ -152,5 +161,6 @@
             <div class="col-md-7"></div>   
         </div> 
     </form>
+</div>
 </body>
 </html>

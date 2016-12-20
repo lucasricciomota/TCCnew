@@ -13,17 +13,18 @@
         </style>
     </head>
     <body>
+
         <?php session_start(); include("../header.php");?>
         <div class="page-content">
             <div class="row">
-                <div class="row jumbotron">
-                    <div class="col-md-1"></div>
-                    <div class="col-md-10">
-                        <h1 class="title">Faça seu cadastro</h1>
-                    </div>
-                    <div class="col-md-1"></div>
+            <div class="row jumbotron">
+                <div class="col-md-1"></div>
+                <div class="col-md-10">
+                    <h1 class="textotitulo1" style="font-size:40px;">Faça seu Cadastro</h1>
                 </div>
+                <div class="col-md-1"></div>
             </div>
+        </div>
             <div class="row">
                 <div class="col-md-7"></div>
                 <div class="col-md-4">

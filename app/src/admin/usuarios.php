@@ -7,9 +7,28 @@
     <script src="/TCCnew/public/js/jquery.min.js"></script>
     <script src="/TCCnew/public/js/bootstrap.min.js"></script>
     <script src="/TCCnew/public/js/scripts.js"></script>
+    <style type="text/css">
+    	.container-fluid .jumbotron {
+		    padding-right: 0px;
+		    padding-left: 0px;
+		}
+		.jumbotron {
+            padding-top: 30px !important;
+            padding-bottom: 30px !important;
+        }
+    </style>
   </head>
 <body>
-  <div class="container-fluid">
+  <div class="page-content">
+  		<div class="row">
+	        <div class="row jumbotron">
+	            <div class="col-md-1"></div>
+	            <div class="col-md-10">
+	                <h1 class="textotitulo1" style="font-size:40px;">Gerencie os Usuários</h1>
+	            </div>
+	            <div class="col-md-1"></div>
+	        </div>
+    	</div>
     <?php
         session_start();
         if (!isset($_SESSION['idtipousuario']) || $_SESSION['idtipousuario'] != 1) {
@@ -56,11 +75,12 @@
 		 		 		<a href='processaadmin.php?idusuario=".$idusuario."&tipousuario=".$idtipousuario."'>".$tipousuario."</a>
 		 		 	</div>
 		 		 	<div class='col-md-1'></div>
-	 			</div>";
-		}
+	 			";
+
 		echo "</table>
  			  	<div class='col-md-1'></div>
  			  </div>";
+ 			}
 	?>
 	</div>
 </body>

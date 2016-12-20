@@ -6,6 +6,12 @@
     </title>
     <link href="/TCCnew/public/css/bootstrap.min.css" rel="stylesheet">
     <link href="/TCCnew/public/css/style.css" rel="stylesheet">
+    <style type="text/css">
+        .jumbotron {
+            padding-top: 30px !important;
+            padding-bottom: 30px !important;
+        }
+    </style>
 </head>
 <body>
 <div class="container-fluid">
@@ -25,7 +31,7 @@
         <div class="row jumbotron">
             <div class="col-md-1"></div>
             <div class="col-md-10">
-                <h1 class="title">Cadastre Pontos Turísticos</h1>
+                <h1 class="textotitulo1" style="font-size:40px;">Cadastre Pontos Turísticos</h1>
             </div>
             <div class="col-md-1"></div>
         </div>
