@@ -11,20 +11,13 @@
 <body>
   <div class="container-fluid">
     <?php
-        session_start();
-        if (!isset($_SESSION['idtipousuario']) || $_SESSION['idtipousuario'] != 1) {
-            header("location:../index.php");
-            exit;
-        }
-
         include("../header.php");
-    ?>
 
-	<?php
 		require_once("../../config/conexao.php");
 		$sql = "SELECT * FROM 'ponto' ORDER by avaliacao DESC limit 10";
 		$resultado = mysqli_query($connection, $sql);
-		echo "<
+
+        
 	?>	
 			
 	</div>

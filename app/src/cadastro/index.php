@@ -13,7 +13,7 @@
         </style>
     </head>
     <body>
-        <?php include("../header.php");?>
+        <?php session_start(); include("../header.php");?>
         <div class="page-content">
             <div class="row">
                 <div class="row jumbotron">

@@ -5,7 +5,6 @@
         <link href="/TCCnew/public/css/bootstrap.min.css" rel="stylesheet">
         <link href="/TCCnew/public/css/style.css" rel="stylesheet">
         <link href="/TCCnew/public/bootstrap/css/bootstrap.min.css" rel="stylesheet">
-        <link href="/TCCnew/public/css/freelancer.min.css" rel="stylesheet">
         <meta http-equiv="X-UA-Compatible" content="IE=edge">
         <meta name="viewport" content="width=device-width, initial-scale=1">
         <meta name="description" content="">
@@ -64,6 +63,11 @@
                 margin-top:100px;
             }
 
+            .col-md-6{
+                padding-left: 0px;
+                padding-right: 0px;
+            }
+
         </style>
     </head>
     <body>
@@ -78,7 +82,7 @@
               <div class='modal-body'>
                 <div class='rowmuseus'>
 
-                    <div class='col-md-6 jumbotron'>
+                    <div class='col-md-6 rowmuseuss'>
                         <div class='main-image'>
                             <img alt='Placeholder' class='custom' id='modalImgPrincipal'>
                         </div>
@@ -86,15 +90,15 @@
                         </ul>
 
                     </div>
-                    <div class='col-md-6 jumbotron'>
+                    <div class='col-md-6 rowmuseuss'>
                         <div class='row''>
-                            <div class='col-md-12' id="idnomemodal"><h1 id="idnomemodal"></h1></div>
+                            <div class='col-md-12' id="idnomemodal"><h1 id="idnomemodal" class="texto" style="font-weight: bold;"></h1></div>
                         </div>
                         <div class='row'>
                             <div class='col-md-12' id='idavaliaçãomodal'>
                                 <form action="processaavaliacao.php" method="get">
                                   Nota:
-                                  <input type="range" name="nota" min="0" max="5" value = "0">
+                                  <input type="range" name="nota" min="0" max="10" value = "0">
                                   <input type="hidden" name="idponto" value=""> 
                                   <input type="submit">
                                 </form>
@@ -144,7 +148,7 @@
         <?php
             require_once("../../config/conexao.php");
 
-            $sql = "select p.idponto, p.nome, m.fotos as fotos, p.latitude, p.longitude
+            $sql = "select p.idponto, p.nome, m.fotos as fotos, p.latitude, p.longitude 
                     from ponto p
                     left join midia m on p.idponto = m.idponto
                     where idTipoPonto = 3
@@ -172,7 +176,7 @@
                             
                             <div class='col-md-12'>
                                 <div class='row'><a onclick='mostrarModal(" . $id . ")'><img src='$fotos' class='img-responsive'></a></div>
-                                <div class='row'>" . $nome . "</div>
+                                <div class='row' color='white'>" . $nome . "</div>
                             </div>
                         </div>";
                 if ($contador == 3) {

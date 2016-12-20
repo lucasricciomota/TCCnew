@@ -5,7 +5,6 @@
         <link href="/TCCnew/public/css/bootstrap.min.css" rel="stylesheet">
         <link href="/TCCnew/public/css/style.css" rel="stylesheet">
         <link href="/TCCnew/public/bootstrap/css/bootstrap.min.css" rel="stylesheet">
-        <link href="/TCCnew/public/css/freelancer.min.css" rel="stylesheet">
         <meta http-equiv="X-UA-Compatible" content="IE=edge">
         <meta name="viewport" content="width=device-width, initial-scale=1">
         <meta name="description" content="">

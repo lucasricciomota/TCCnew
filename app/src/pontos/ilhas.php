@@ -5,7 +5,6 @@
         <link href="/TCCnew/public/css/bootstrap.min.css" rel="stylesheet">
         <link href="/TCCnew/public/css/style.css" rel="stylesheet">
         <link href="/TCCnew/public/bootstrap/css/bootstrap.min.css" rel="stylesheet">
-        <link href="/TCCnew/public/css/freelancer.min.css" rel="stylesheet">
         <meta http-equiv="X-UA-Compatible" content="IE=edge">
         <meta name="viewport" content="width=device-width, initial-scale=1">
         <meta name="description" content="">
@@ -59,6 +58,9 @@
             #map{
                 width: 100%;
                 height: 300px;
+            }
+            .rowtitulo{
+                margin-top:100px;
             }
 
         </style>
@@ -132,7 +134,7 @@
           </div><!-- /.modal-dialog -->
         </div><!-- /.modal -->
     </div>
-                    <div class="row">
+                    <div class="rowtitulo">
                         <div class="col-lg-12 text-center">
                             <h2>Ilhas</h2>
                             </br>   
@@ -152,7 +154,7 @@
             $contadorimg = 0;
             $linhas = mysqli_fetch_all($resultado, MYSQL_ASSOC);
 
-            echo '<script type="text/javascript">var ilhas = JSON.parse(\''.json_encode($linhas).'\');</script>';
+            echo '<script type="text/javascript">var museus = JSON.parse(\''.json_encode($linhas).'\');</script>';
 
             foreach ($linhas as $linha) {
                 $contador = $contador + 1;

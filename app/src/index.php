@@ -5,6 +5,9 @@
     <link rel="stylesheet" type="text/css" href="/TCCnew/public/css/bootstrap.min.css">
     <link rel="stylesheet" type="text/css" href="/TCCnew/public/css/style.css">
     <link rel="stylesheet" type="text/css" href="/TCCnew/public/css/carousel.css">
+
+
+
 </head>
     <body>
         <?php
@@ -23,7 +26,7 @@
                 <!-- Wrapper for slides -->
                 <div class="carousel-inner">
                     <div class="item active">
-                        <img src="/TCCnew/public/images/1.jpg" alt="...">
+                        <img src="/TCCnew/public/images/0.jpg" alt="...">
                         <div class="carousel-caption">
                         </div>
                     </div>
@@ -52,23 +55,18 @@
         <div class="row container-block">
             <div class="col-md-1"></div>
             <div class="col-md-10">
-                <div id="sobre" class="row content">
-                    <div class="col-md-12">
-                        <h1 class="title text-center">São Francisco do Sul</h1>
-                    </div>
-                </div>
 
                 <hr/>
 
                 <div id="historia" class="row content">
                     <div class="col-md-5">
-                        <h3 class="block-title">História?</h3>
+                        <h3 class="block-title ">História?</h3>
                         <h4>São Francisco do Sul é a cidade mais antiga de Santa Catarina e a terceira cidade mais antiga do Brasil.</h4>
                         <button class="btn btn-info"><a href="historia/historia.php">Veja mais</a></button>
                     </div>
                     <div class="col-md-2"></div>
                     <div class="col-md-5 video">
-                        <img width="100%" height="50%" src="/TCCnew/public/images/1.jpg" />
+                        <img width="100%" height="50%" src="/TCCnew/public/images/0.jpg" />
                     </div>
                 </div>
 

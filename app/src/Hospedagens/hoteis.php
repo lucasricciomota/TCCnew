@@ -7,7 +7,7 @@
     <link href="/TCCnew/public/css/style.css" rel="stylesheet">
 </head>
 <body>
-	<?php require_once("../header.php");?>
+	<?php include("../header.php");?>
         <div class="container-fluid">
             <div class="row pontos jumbotron">
                 <div class="col-md-1"></div>
@@ -16,7 +16,7 @@
                 <div class="col-md-4"></div>
             </div>
             <?php 
-            require_once("../conexao.php");
+            require_once("../../config/conexao.php");
             $sql = "select h.idHospedagem, h.nome, min(m.fotos) as fotos
                         from hospedagem h left join midia m on h.idHospedagem = h.idHospedagem
                         where idHospedagem = 1

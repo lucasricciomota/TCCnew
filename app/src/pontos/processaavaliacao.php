@@ -1,10 +1,12 @@
 <?php
-var_dump($_GET);
+
 session_start();
 
 $nota = $_GET["nota"];
-$idusuario = $_SESSION['idusuario'];
-$idponto = $_GET["idponto"];
+if(isset($_SESSION["idusuario"]))
+{
+	$idusuario = $_SESSION['idusuario'];
+	$idponto = $_GET["idponto"];
 
 echo("idusuario $idusuario<br>");
 
@@ -15,6 +17,7 @@ $sql = "INSERT INTO avaliacao (nota, idponto, idusuario) VALUES ('$nota', '$idpo
 $resultado = mysqli_query($connection, $sql);
 
 
+
 if($resultado == true)
 {
 
@@ -22,6 +25,11 @@ if($resultado == true)
 	$resultado = mysqli_query($connection, $sql);
 	header('Location: ' . $_SERVER['HTTP_REFERER']);
 }
+}
+else{
+	echo("Você precisa estar logado para mandar uma avaliação");
+}
+
 
 
 ?>

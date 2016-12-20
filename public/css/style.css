@@ -62,7 +62,6 @@
 html, body{
   height: 100%;
   padding: 0;
-  margin: 0;
 }
 
 body{
@@ -103,7 +102,7 @@ div.row{
     position: fixed;
     top: 0;
     left: 0;
-    background: #1abc9c;
+    background: #f3a601;
     height: 98px;
     z-index: 99;
     border-bottom: 1px solid white;
@@ -208,4 +207,68 @@ h1, h2, h3{
 
 .form-data .btn-enter{
     margin: 20px 0;
+}
+
+
+.video{
+height: 100% !important;
+}
+
+@font-face {
+font-family: bodoni;
+src: url('../BodoniFLF-Roman.ttf');
+}
+
+@font-face {
+font-family: ralewaythin;
+src: url('../fonts/raleway/Raleway-Thin.ttf');
+}
+
+@font-face {
+font-family: ralewayextralight;
+src: url('../fonts/raleway/Raleway-ExtraLight.ttf');
+}
+
+@font-face {
+font-family: ralewaylight;
+src: url('../fonts/raleway/Raleway-Light.ttf');
+}
+
+@font-face {
+font-family: playfairdisplay;
+src: url('../fonts/playfair_display/PlayfairDisplay-BoldItalic.ttf');
+}
+
+@font-face {
+font-family: ralewaybold;
+src: url('../fonts/raleway/Raleway-Bold.ttf');
+}
+
+.textotitulo{
+  font-family: ralewaybold;
+  text-transform: uppercase;
+  text-decoration-color: white;
+}
+
+.textotitulo1{
+  font-family: ralewayextralight;
+  text-decoration-color: white;
+
+}
+
+.texto{
+  font-family: bodoni;
+}
+
+.overlay {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    z-index: 2;
+    background-color: rgb(80, 80, 80);
+    opacity: .6;
+}
+
+.divisor {
+    margin: 38px 0;
 }

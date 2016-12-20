@@ -14,7 +14,7 @@
                     $_SESSION["idusuario"] = $linha["idusuario"];
                     $_SESSION["nomeusuario"] = $linha["nome"];
                     $_SESSION ["idtipousuario"] = $linha["idtipoUsuario"];
-                    header('location:index.php');
+                    header('location:indexteste.php');
                 }
             } else {
                 echo "Usuário não encontrado";

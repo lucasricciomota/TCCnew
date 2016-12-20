@@ -13,7 +13,7 @@
                 <div class="col-md-1"></div>
                     <h1>Pousadas</h1>        
                 <div class="col-md-7"></div>    
-                <div class="col-md-4"></div><
+                <div class="col-md-4"></div>
             </div>
             <?php 
             require_once("../../config/conexao.php");
