@@ -10,13 +10,16 @@
                 background: url("/TCCnew/public/images/background/cadastro_bg.jpg") transparent no-repeat fixed;
                 background-position: 50% center;
             }
+            .jumbotron {
+                padding-top: 30px !important;
+                padding-bottom: 30px !important;
+            }
         </style>
     </head>
     <body>
 
         <?php session_start(); include("../header.php");?>
         <div class="page-content">
-            <div class="row">
             <div class="row jumbotron">
                 <div class="col-md-1"></div>
                 <div class="col-md-10">
@@ -24,7 +27,6 @@
                 </div>
                 <div class="col-md-1"></div>
             </div>
-        </div>
             <div class="row">
                 <div class="col-md-7"></div>
                 <div class="col-md-4">

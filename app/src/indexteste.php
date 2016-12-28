@@ -39,6 +39,8 @@
         border-color: #e55829;
         }
 
+      .align-right { text-align:right; }
+
     </style>
   </head>
 <!-- NAVBAR
@@ -81,17 +83,48 @@
         </div>
 
         <div class="item">
-          <img class="second-slide" src="/TCCnew/public/images/fundo.jpg" alt="Second slide">
+          <img class="second-slide" src="/TCCnew/public/images/carousel/museudomar.jpg" alt="Second slide">
           <div class="overlay"></div>
           <div class="container">
-            <div class="carousel-caption">
-              <h1 class="textotitulo1" style="font-size:45px;">Veja</h1>
-              <h1 class="textotitulo" style="font-size:68px;">os melhores pontos</h1>
-              <br>
-              <br>
-              <br>
-              <p><a class="btn btn-lg btn-warning" href="pontos/melhorespontos.php" role="button">Ranking</a></p>
-              <br>
+            <div class="carousel-caption" style="margin-bottom:60px;">
+              <h1 class="textotitulo1" style="font-size:32px;">Visite o grande acervo do Museu Nacional do Mar</h1>
+              <a class="btn btn-lg btn-warning" href="pontos/museus.php" role="button">Veja mais &raquo;</a>
+            </div>
+          </div>  
+        </div>
+
+        
+        <div class="item">
+          <img class="second-slide" src="/TCCnew/public/images/carousel/3.jpg" alt="Second slide">
+          <div class="overlay"></div>
+          <div class="container">
+            <div class="carousel-caption" style="margin-bottom:60px;">
+              <h1 class="textotitulo1" style="font-size:32px;">Aproveite as boas paisagens e ondas da Praia Grande</h1>
+              <a class="btn btn-lg btn-warning" href="pontos/praias.php" role="button">Veja mais &raquo;</a>
+            </div>
+          </div>  
+        </div>
+
+
+        <div class="item">
+          <img class="second-slide" src="/TCCnew/public/images/carousel/4.jpg" alt="Second slide">
+          <div class="overlay"></div>
+          <div class="container">
+            <div class="carousel-caption" style="margin-bottom:60px;">
+              <h1 class="textotitulo1" style="font-size:32px;">Explore a vasta costa do Ervino</h1>
+              <a class="btn btn-lg btn-warning" href="pontos/praias.php" role="button">Veja mais &raquo;</a>
+            </div>
+          </div>  
+        </div>
+
+
+        <div class="item">
+          <img class="second-slide" src="/TCCnew/public/images/carousel/mercadomunicipal3.jpg" alt="Second slide">
+          <div class="overlay"></div>
+          <div class="container">
+            <div class="carousel-caption" style="margin-bottom:60px;">
+              <h1 class="textotitulo1" style="font-size:32px;">Venha comprar no antigo e famoso Mercado Municipal</h1>
+              <a class="btn btn-lg btn-warning" href="pontos/lazer.php" role="button">Veja mais &raquo;</a>
             </div>
           </div>  
         </div>
@@ -108,35 +141,31 @@
     </div><!-- /.carousel -->
 
 
-    <!-- Marketing messaging and featurettes
-    ================================================== -->
-    <!-- Wrap the rest of the page in another container to center all the content. -->
+  
 
     <div class="container marketing">
 
-      <!-- Three columns of text below the carousel -->
-      <div class="row">
+<!--       <div class="row">
         <div class="col-lg-4">
           <img class="img-circle" src="data:image/gif;base64,R0lGODlhAQABAIAAAHd3dwAAACH5BAAAAAAALAAAAAABAAEAAAICRAEAOw==" alt="Generic placeholder image" width="140" height="140">
           <h2>Heading</h2>
           <p>Donec sed odio dui. Etiam porta sem malesuada magna mollis euismod. Nullam id dolor id nibh ultricies vehicula ut id elit. Morbi leo risus, porta ac consectetur ac, vestibulum at eros. Praesent commodo cursus magna.</p>
           <p><a class="btn btn-default" href="#" role="button">View details &raquo;</a></p>
-        </div><!-- /.col-lg-4 -->
+        </div>
         <div class="col-lg-4">
           <img class="img-circle" src="data:image/gif;base64,R0lGODlhAQABAIAAAHd3dwAAACH5BAAAAAAALAAAAAABAAEAAAICRAEAOw==" alt="Generic placeholder image" width="140" height="140">
           <h2>Heading</h2>
           <p>Duis mollis, est non commodo luctus, nisi erat porttitor ligula, eget lacinia odio sem nec elit. Cras mattis consectetur purus sit amet fermentum. Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh.</p>
           <p><a class="btn btn-default" href="#" role="button">View details &raquo;</a></p>
-        </div><!-- /.col-lg-4 -->
+        </div>
         <div class="col-lg-4">
           <img class="img-circle" src="data:image/gif;base64,R0lGODlhAQABAIAAAHd3dwAAACH5BAAAAAAALAAAAAABAAEAAAICRAEAOw==" alt="Generic placeholder image" width="140" height="140">
           <h2>Heading</h2>
           <p>Donec sed odio dui. Cras justo odio, dapibus ac facilisis in, egestas eget quam. Vestibulum id ligula porta felis euismod semper. Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh, ut fermentum massa justo sit amet risus.</p>
           <p><a class="btn btn-default" href="#" role="button">View details &raquo;</a></p>
-        </div><!-- /.col-lg-4 -->
-      </div><!-- /.row -->
+        </div> -->
 
-<!--       <div class="slider slider-for slick-initialized slick-slider">
+       <!-- <div class="slider slider-for slick-initialized slick-slider">
         <div aria-live="polite" class="slick-list draggable">
           <div class="slick-track" style="opacity: 1; width: 2800px;" role="listbox">
             <div class="slick-slide slick-current slick-active" data-slick-index="0" aria-hidden="false" style="width: 560px; position: relative; left: 0px; top: 0px; z-index: 999; opacity: 1;" tabindex="-1" role="option" aria-describedby="slick-slide120">
@@ -226,13 +255,14 @@
 
       <!-- START THE FEATURETTES -->
 
-      <hr class="featurette-divider">
-
+<!--       <hr class="featurette-divider">
+ -->
       <div class="row featurette" id="historia">
         <div class="col-md-7">
-          <h2 class="featurette-heading texto">Hisória <span class="text-muted">da cidade.</span></h2>
-          <p class="lead texto"x>São Francisco do Sul é a cidade mais antiga de Santa Catarina e a terceira cidade mais antiga do Brasil. Colonizada pelos Portugueses, espanhóis e açorianos, sua primeira ocupação, foi feita temporariamente por espanhóis por volta de 1553.</p>
-          <a class="btn btn-default" href="historia/historia.php" role="button" >Leia mais &raquo;</a>
+          <h2 class="featurette-heading textotitulo1" style="font-size:45px; text-align:right;" >Hisória da cidade.</h2>
+          <p class="lead texto" style="text-align:right;">São Francisco do Sul é a cidade mais antiga de Santa Catarina e a terceira cidade mais antiga do Brasil. Colonizada pelos Portugueses, espanhóis e açorianos, sua primeira ocupação, foi feita temporariamente por espanhóis por volta de 1553.</p>
+            <a class="btn btn-default" href="historia/historia.php" role="button" >Leia mais &raquo;</a>
+          
         </div>
         <div class="col-md-5">
           <img class="featurette-image img-responsive center-block" src="../../public/images/0.jpg" width="500px" alt="Generic placeholder image">
@@ -243,24 +273,23 @@
 
       <div class="row featurette" id="quemsomos">
         <div class="col-md-7 col-md-push-5">
-          <h2 class="featurette-heading texto">Quem Somos? </h2>
+          <h2 class="featurette-heading textotitulo1" style="font-size:45px;">Quem Somos? </h2>
           <p class="lead texto">Somos estudantes formados no curso técnico de Informática integrado com o Ensino Médio do Instituto Federal de Ciência e Tecnologia do campus de Araquari, e como moradores de São Francisco do Sul conhecemos a falta de acesso e de informação sobre a cidade que é tão bela, mas não aproveitada ao máximo.</p>
           <a class="btn btn-default" href="quem somos/quem somos.php" role="button">Leia mais &raquo;</a>
         </div>
         <div class="col-md-5 col-md-pull-7">
-          <img class="featurette-image img-responsive center-block" data-src="holder.js/500x500/auto" alt="Generic placeholder image">
+          <img class="featurette-image img-responsive center-block" src="../../public/images/quemsomos.jpg" width="500px" alt="Generic placeholder image">
         </div>
       </div>
 
-      <div class="row featurette">
-        <div class="col-md-12">
-          <h2 class="featurette-heading texto">Assista ao documentário realizado. </h2>
-        </div>
-      </div>
+      <hr class="featurette-divider">
 
-      <div class="row">
-        <div class="col-md-12">
-          <iframe width="100%" height="720px" src="https://www.youtube.com/embed/OMJTAZLH9lE" frameborder="0" allowfullscreen></iframe>
+      <div class="row featurette" id="video">
+        <div class="col-md-7">
+          <h2 class="featurette-heading textotitulo1" style="font-size:45px; text-align:right;">Assista ao documentário realizado.</h2>
+        </div>
+        <div class="col-md-5">
+          <iframe width="100%" height="370px" src="https://www.youtube.com/embed/OMJTAZLH9lE" frameborder="0" allowfullscreen></iframe>
         </div>
       </div>
       <hr class="featurette-divider">

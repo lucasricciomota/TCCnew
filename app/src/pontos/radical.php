@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html>
     <head>
-        <title>Museus</title>
+        <title>Radical</title>
         <link href="/TCCnew/public/css/bootstrap.min.css" rel="stylesheet">
         <link href="/TCCnew/public/css/style.css" rel="stylesheet">
         <link href="/TCCnew/public/bootstrap/css/bootstrap.min.css" rel="stylesheet">
@@ -63,10 +63,30 @@
                 margin-top:100px;
             }
 
+            .col-md-6{
+                padding-left: 0px;
+                padding-right: 0px;
+            }
+
+            .jumbotron {
+            padding-top: 30px !important;
+            padding-bottom: 30px !important;
+            }
+
         </style>
     </head>
     <body>
         <?php session_start(); include("../header.php");?>
+        <div class="page-content">
+            <div class="row">
+                <div class="row jumbotron">
+                    <div class="col-md-1"></div>
+                    <div class="col-md-10">
+                        <h1 class="textotitulo1" style="font-size:40px;">Radical</h1>
+                    </div>
+                    <div class="col-md-1"></div>
+                </div>
+            </div>
         <div class="container-fluid">
         <div id='tallModal' class='modal modal-wide fade'>
           <div class='modal-dialog'>
@@ -77,7 +97,7 @@
               <div class='modal-body'>
                 <div class='rowmuseus'>
 
-                    <div class='col-md-6 jumbotron'>
+                    <div class='col-md-6 rowmuseuss'>
                         <div class='main-image'>
                             <img alt='Placeholder' class='custom' id='modalImgPrincipal'>
                         </div>
@@ -85,15 +105,15 @@
                         </ul>
 
                     </div>
-                    <div class='col-md-6 jumbotron'>
+                    <div class='col-md-6 rowmuseuss'>
                         <div class='row''>
-                            <div class='col-md-12' id="idnomemodal"><h1 id="idnomemodal"></h1></div>
+                            <div class='col-md-12' id="idnomemodal"><h1 id="idnomemodal" class="texto" style="font-weight: bold;"></h1></div>
                         </div>
                         <div class='row'>
                             <div class='col-md-12' id='idavaliaçãomodal'>
                                 <form action="processaavaliacao.php" method="get">
                                   Nota:
-                                  <input type="range" name="nota" min="0" max="5" value = "0">
+                                  <input type="range" name="nota" min="0" max="10" value = "0">
                                   <input type="hidden" name="idponto" value=""> 
                                   <input type="submit">
                                 </form>
@@ -134,16 +154,11 @@
           </div><!-- /.modal-dialog -->
         </div><!-- /.modal -->
     </div>
-                    <div class="rowtitulo">
-                        <div class="col-lg-12 text-center">
-                            <h2>Radical</h2>
-                            </br>   
-                        </div>
-                    </div>
+                    
         <?php
             require_once("../../config/conexao.php");
 
-            $sql = "select p.idponto, p.nome, m.fotos as fotos, p.latitude, p.longitude
+            $sql = "select p.idponto, p.nome, m.fotos as fotos, p.latitude, p.longitude 
                     from ponto p
                     left join midia m on p.idponto = m.idponto
                     where idTipoPonto = 5
@@ -171,7 +186,7 @@
                             
                             <div class='col-md-12'>
                                 <div class='row'><a onclick='mostrarModal(" . $id . ")'><img src='$fotos' class='img-responsive'></a></div>
-                                <div class='row'>" . $nome . "</div>
+                                <div class='row' color='white'>" . $nome . "</div>
                             </div>
                         </div>";
                 if ($contador == 3) {
@@ -193,6 +208,8 @@
                     <div class='col-md-1'></div>
                     </div>";
             }
+
+        echo"</div>";
 
             
         ?>

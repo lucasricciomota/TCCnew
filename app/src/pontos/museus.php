@@ -68,10 +68,25 @@
                 padding-right: 0px;
             }
 
+            .jumbotron {
+            padding-top: 30px !important;
+            padding-bottom: 30px !important;
+            }
+
         </style>
     </head>
     <body>
         <?php session_start(); include("../header.php");?>
+        <div class="page-content">
+            <div class="row">
+                <div class="row jumbotron">
+                    <div class="col-md-1"></div>
+                    <div class="col-md-10">
+                        <h1 class="textotitulo1" style="font-size:40px;">Museus</h1>
+                    </div>
+                    <div class="col-md-1"></div>
+                </div>
+            </div>
         <div class="container-fluid">
         <div id='tallModal' class='modal modal-wide fade'>
           <div class='modal-dialog'>
@@ -81,14 +96,12 @@
               </div>
               <div class='modal-body'>
                 <div class='rowmuseus'>
-
                     <div class='col-md-6 rowmuseuss'>
                         <div class='main-image'>
                             <img alt='Placeholder' class='custom' id='modalImgPrincipal'>
                         </div>
                         <ul class='thumbnails'>
                         </ul>
-
                     </div>
                     <div class='col-md-6 rowmuseuss'>
                         <div class='row''>
@@ -111,14 +124,7 @@
                                         <option value="4">4</option>    
                                         <option value="5">5</option>
                                     </select>
-                                </form>
-                                <?php 
-                                    // require_once("../../config/conexao.php");
-                                    // $SQL = " SELECT votos, nota FROM avaliacao WHERE idAvaliacao = 1";
-                                    // $RS = mysql_query($SQL);
-                                    // $RF = mysql_fetch_array($RS);
-                                    // $r = number_format($RF[ 'nota' ] / $RF[ 'votos' ],2,'.','.');
-                                 ?> -->
+                                </form>-->
                                 
                             </div>
                         </div>
@@ -139,16 +145,11 @@
           </div><!-- /.modal-dialog -->
         </div><!-- /.modal -->
     </div>
-                    <div class="rowtitulo">
-                        <div class="col-lg-12 text-center">
-                            <h2>Museus</h2>
-                            </br>   
-                        </div>
-                    </div>
+                    
         <?php
             require_once("../../config/conexao.php");
 
-            $sql = "select p.idponto, p.nome, m.fotos as fotos, p.latitude, p.longitude 
+            $sql = "select p.idponto, p.descricao, p.nome, m.fotos as fotos, p.latitude, p.longitude 
                     from ponto p
                     left join midia m on p.idponto = m.idponto
                     where idTipoPonto = 3
@@ -167,6 +168,7 @@
                 $id = $linha["idponto"];
                 $nome = $linha["nome"];
                 $fotos = $linha["fotos"];
+                $descricao = $linha["descricao"];
 
                  if ($contador == 1) {
                     echo "<div class='row'>
@@ -176,7 +178,6 @@
                             
                             <div class='col-md-12'>
                                 <div class='row'><a onclick='mostrarModal(" . $id . ")'><img src='$fotos' class='img-responsive'></a></div>
-                                <div class='row' color='white'>" . $nome . "</div>
                             </div>
                         </div>";
                 if ($contador == 3) {
@@ -198,6 +199,8 @@
                     <div class='col-md-1'></div>
                     </div>";
             }
+
+        echo"</div>";
 
             
         ?>

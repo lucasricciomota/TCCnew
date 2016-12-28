@@ -23,19 +23,24 @@
             background-color: #282828;
             overflow: hidden;
         }
+        .jumbotron {
+            padding-top: 30px !important;
+            padding-bottom: 30px !important;
+            }
     </style>
 </head>
 <body>
     <?php session_start(); include("../header.php");?>
-    <div class="container-fluid">
-            <div class="col-md-1"></div>
-            <div class="col-md-10">
-                <div class="main-title">
-                    <h1 class="texto">Quem Somos? </h1>
+        <div class="page-content">
+            <div class="row">
+                <div class="row jumbotron">
+                    <div class="col-md-1"></div>
+                    <div class="col-md-10">
+                        <h1 class="textotitulo1" style="font-size:40px;">Quem Somos?</h1>
+                    </div>
+                    <div class="col-md-1"></div>
                 </div>
             </div>
-            <div class="col-md-1"></div>
-        </div>
 
         <div class="row assunto">
             <div class="col-md-1"></div>
